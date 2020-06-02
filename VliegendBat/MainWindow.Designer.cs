@@ -1,6 +1,6 @@
 ﻿namespace VliegendBat
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.pnlContent = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // pnlContent
+            // 
+            this.pnlContent.Location = new System.Drawing.Point(12, 9);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(669, 325);
+            this.pnlContent.TabIndex = 0;
+            // 
+            // MainWindow
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(699, 346);
+            this.Controls.Add(this.pnlContent);
+            this.Name = "MainWindow";
+            this.Text = "Vliegend Bat";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnlContent;
     }
 }
 

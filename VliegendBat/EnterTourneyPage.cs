@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace VliegendBat
 {
-    public partial class Form1 : Form
+    public partial class EnterTourneyPage : UserControl
     {
-        public Form1()
+        public EnterTourneyPage()
         {
             InitializeComponent();
+        }
+
+        //Button Click to return to dashboard
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            MainWindow.SetPage(Pages.Dashboard);
         }
     }
 }
