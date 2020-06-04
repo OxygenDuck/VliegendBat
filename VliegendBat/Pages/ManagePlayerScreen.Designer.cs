@@ -34,7 +34,7 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(185, 255);
+            this.btnReturn.Location = new System.Drawing.Point(325, 253);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(204, 44);
             this.btnReturn.TabIndex = 5;
@@ -44,9 +44,10 @@
             // 
             // pnlPlayerList
             // 
+            this.pnlPlayerList.AutoScroll = true;
             this.pnlPlayerList.Location = new System.Drawing.Point(3, 3);
             this.pnlPlayerList.Name = "pnlPlayerList";
-            this.pnlPlayerList.Size = new System.Drawing.Size(555, 235);
+            this.pnlPlayerList.Size = new System.Drawing.Size(829, 235);
             this.pnlPlayerList.TabIndex = 4;
             // 
             // ManagePlayerScreen
@@ -56,7 +57,7 @@
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pnlPlayerList);
             this.Name = "ManagePlayerScreen";
-            this.Size = new System.Drawing.Size(561, 313);
+            this.Size = new System.Drawing.Size(835, 313);
             this.ResumeLayout(false);
 
         }

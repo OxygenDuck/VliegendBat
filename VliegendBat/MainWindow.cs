@@ -16,10 +16,8 @@ namespace VliegendBat
         Dashboard,
         CreateTourney,
         ManageTourney,
-        ManageMatches,
         ManagePlayers,
-        Signup,
-        Statistics
+        Signup
     }
 
     public partial class MainWindow : Form
@@ -49,13 +47,37 @@ namespace VliegendBat
                 case Pages.Dashboard: control = new Dashboard(); break;
                 case Pages.CreateTourney: control = new CreateTourneyScreen(); break;
                 case Pages.ManageTourney: control = new ManageTourneyScreen(); break;
-                //TODO: Set link to given match here
-                case Pages.ManageMatches: control = new ManageMatchScreen(""); break;
                 case Pages.ManagePlayers: control = new ManagePlayerScreen(); break;
                 case Pages.Signup: control = new EnterTourneyPage(); break;
-                //TODO: Set link to given player here
-                case Pages.Statistics: control = new PlayerStatisticsPage(""); break;
             }
+
+            //Set page to panel
+            Program.window.pnlContent.Controls.Clear();
+            Program.window.pnlContent.Controls.Add(control);
+        }
+
+        /// <summary>
+        /// Set the shown page on the main window
+        /// </summary>
+        /// <param name="tourney">The tourney for use in a Manage Match Screen</param>
+        static public void SetPage(Tourney tourney)
+        {
+            //Get the correct usercontrol
+            UserControl control = new ManageMatchScreen(tourney);
+
+            //Set page to panel
+            Program.window.pnlContent.Controls.Clear();
+            Program.window.pnlContent.Controls.Add(control);
+        }
+
+        /// <summary>
+        /// Set the shown page on the main window
+        /// </summary>
+        /// <param name="player">The player for use in a Player Statistics Page</param>
+        static public void SetPage(Player player)
+        {
+            //Get the correct usercontrol
+            UserControl control = new PlayerStatisticsPage(player);
 
             //Set page to panel
             Program.window.pnlContent.Controls.Clear();

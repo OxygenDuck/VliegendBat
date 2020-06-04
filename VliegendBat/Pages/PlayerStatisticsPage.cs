@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace VliegendBat
 {
-    public partial class EnterTourneyPage : UserControl
+    public partial class PlayerStatisticsPage : UserControl
     {
-        public EnterTourneyPage()
+        //Player object to reference
+        private Player player = null;
+        
+        /// <summary>
+        /// Create an instance of the UserStatistics page
+        /// </summary>
+        /// <param name="player">The player of which you want to see the statistics</param>
+        public PlayerStatisticsPage(Player player)
         {
             InitializeComponent();
+
+            this.player = player;
         }
 
         //Button Click to return to dashboard
@@ -22,5 +31,7 @@ namespace VliegendBat
         {
             MainWindow.SetPage(Pages.Dashboard);
         }
+
+        //TODO: Literally everything for player statistics
     }
 }

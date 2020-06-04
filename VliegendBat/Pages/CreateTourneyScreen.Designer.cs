@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaveTourney = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxName
@@ -69,10 +70,21 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Naam:";
             // 
+            // btnReturn
+            // 
+            this.btnReturn.Location = new System.Drawing.Point(170, 158);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(75, 23);
+            this.btnReturn.TabIndex = 4;
+            this.btnReturn.Text = "Terug";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // CreateTourneyScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSaveTourney);
             this.Controls.Add(this.label1);
@@ -90,5 +102,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSaveTourney;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

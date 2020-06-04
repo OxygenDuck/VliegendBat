@@ -46,22 +46,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateTourneyScreen.cs">
+    <Compile Include="Classes\Match.cs" />
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="PageItems\ManageMatchListing.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CreateTourneyScreen.Designer.cs">
+    <Compile Include="PageItems\ManageMatchListing.Designer.cs">
+      <DependentUpon>ManageMatchListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageItems\ManageTourneyListing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageItems\ManageTourneyListing.Designer.cs">
+      <DependentUpon>ManageTourneyListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageItems\ManageUserListing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageItems\ManageUserListing.Designer.cs">
+      <DependentUpon>ManageUserListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageItems\SignupTourneyListing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageItems\SignupTourneyListing.Designer.cs">
+      <DependentUpon>SignupTourneyListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CreateTourneyScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\CreateTourneyScreen.Designer.cs">
       <DependentUpon>CreateTourneyScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="EnterTourneyPage.cs">
+    <Compile Include="Pages\EnterTourneyPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EnterTourneyPage.Designer.cs">
+    <Compile Include="Pages\EnterTourneyPage.Designer.cs">
       <DependentUpon>EnterTourneyPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginScreen.cs">
+    <Compile Include="Pages\LoginScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LoginScreen.Designer.cs">
+    <Compile Include="Pages\LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
@@ -70,57 +96,70 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageMatchScreen.cs">
+    <Compile Include="Pages\ManageMatchScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ManageMatchScreen.Designer.cs">
+    <Compile Include="Pages\ManageMatchScreen.Designer.cs">
       <DependentUpon>ManageMatchScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagePlayerScreen.cs">
+    <Compile Include="Pages\ManagePlayerScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ManagePlayerScreen.Designer.cs">
+    <Compile Include="Pages\ManagePlayerScreen.Designer.cs">
       <DependentUpon>ManagePlayerScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageTourneyScreen.cs">
+    <Compile Include="Pages\ManageTourneyScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ManageTourneyScreen.Designer.cs">
+    <Compile Include="Pages\ManageTourneyScreen.Designer.cs">
       <DependentUpon>ManageTourneyScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Pages\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="Pages\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlayerStatisticsPage.cs">
+    <Compile Include="Pages\PlayerStatisticsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PlayerStatisticsPage.Designer.cs">
+    <Compile Include="Pages\PlayerStatisticsPage.Designer.cs">
       <DependentUpon>PlayerStatisticsPage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CreateTourneyScreen.resx">
+    <Compile Include="Classes\Tourney.cs" />
+    <EmbeddedResource Include="PageItems\ManageMatchListing.resx">
+      <DependentUpon>ManageMatchListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageItems\ManageTourneyListing.resx">
+      <DependentUpon>ManageTourneyListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageItems\ManageUserListing.resx">
+      <DependentUpon>ManageUserListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageItems\SignupTourneyListing.resx">
+      <DependentUpon>SignupTourneyListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\CreateTourneyScreen.resx">
       <DependentUpon>CreateTourneyScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EnterTourneyPage.resx">
+    <EmbeddedResource Include="Pages\EnterTourneyPage.resx">
       <DependentUpon>EnterTourneyPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginScreen.resx">
+    <EmbeddedResource Include="Pages\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageMatchScreen.resx">
+    <EmbeddedResource Include="Pages\ManageMatchScreen.resx">
       <DependentUpon>ManageMatchScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagePlayerScreen.resx">
+    <EmbeddedResource Include="Pages\ManagePlayerScreen.resx">
       <DependentUpon>ManagePlayerScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageTourneyScreen.resx">
+    <EmbeddedResource Include="Pages\ManageTourneyScreen.resx">
       <DependentUpon>ManageTourneyScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -132,10 +171,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="Pages\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlayerStatisticsPage.resx">
+    <EmbeddedResource Include="Pages\PlayerStatisticsPage.resx">
       <DependentUpon>PlayerStatisticsPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

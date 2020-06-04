@@ -26,7 +26,8 @@ namespace VliegendBat
         //Button Click to log out and go back to login screen
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            //TODO: log out
+            //log out
+            Program.CurrentPlayer = null;
 
             MainWindow.SetPage(Pages.Login);
         }
@@ -52,7 +53,7 @@ namespace VliegendBat
         //Button Click to go to Show Statistics screen
         private void btnShowStatistics_Click(object sender, EventArgs e)
         {
-            MainWindow.SetPage(Pages.Statistics);
+            MainWindow.SetPage(Program.CurrentPlayer);
         }
     }
 }

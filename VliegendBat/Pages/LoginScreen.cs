@@ -20,6 +20,21 @@ namespace VliegendBat
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //TODO: Check account before granting access
+            //DEBUG: just create a new player for now, replace with actual players later
+            foreach (Player player in Program.Players)
+            {
+                if (player.name == tbxUsername.Text)
+                {
+                    Program.CurrentPlayer = player;
+                    break;
+                }
+            }
+            if (Program.CurrentPlayer == null)
+            {
+                Program.CurrentPlayer = new Player(tbxUsername.Text);
+                Program.Players.Add(Program.CurrentPlayer);
+            }
+
             MainWindow.SetPage(Pages.Dashboard);
         }
     }
