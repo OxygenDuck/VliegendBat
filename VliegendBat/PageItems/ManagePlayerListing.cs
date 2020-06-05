@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace VliegendBat
 {
-    public partial class ManageUserListing : UserControl
+    public partial class ManagePlayerListing : UserControl
     {
         //The player associated with this control
         public Player player = null;
@@ -19,7 +19,7 @@ namespace VliegendBat
         /// Make a new User listing for the Manage Users page
         /// </summary>
         /// <param name="player">The player to associate with this control</param>
-        public ManageUserListing(Player player)
+        public ManagePlayerListing(Player player)
         {
             InitializeComponent();
 
@@ -45,6 +45,7 @@ namespace VliegendBat
         {
             //TODO: change settings
             //TODO: Save changes to storage
+            Program.SavePlayers();
         }
 
         //Button click to show user statistics

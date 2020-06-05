@@ -10,13 +10,17 @@ using System.Windows.Forms;
 
 namespace VliegendBat
 {
-    public partial class ManagePlayerScreen : UserControl
+    public partial class ManagePlayerPage : UserControl
     {
-        public ManagePlayerScreen()
+        /// <summary>
+        /// Create a new Manage Player Page
+        /// </summary>
+        public ManagePlayerPage()
         {
             InitializeComponent();
 
             UpdateListing();
+            Program.fromPlayerManager = true;
         }
 
         public void UpdateListing()
@@ -25,7 +29,7 @@ namespace VliegendBat
 
             for (int i = 0; i < Program.Players.Count; i++)
             {
-                ManageUserListing newListing = new ManageUserListing(Program.Players[i]);
+                ManagePlayerListing newListing = new ManagePlayerListing(Program.Players[i]);
                 pnlPlayerList.Controls.Add(newListing);
                 newListing.Location = new Point(0, (newListing.Height * i));
 
@@ -44,6 +48,7 @@ namespace VliegendBat
         //Button Click to return to dashboard
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            Program.fromPlayerManager = false;
             MainWindow.SetPage(Pages.Dashboard);
         }
     }

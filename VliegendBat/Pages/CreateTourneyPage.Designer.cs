@@ -1,6 +1,6 @@
 ﻿namespace VliegendBat
 {
-    partial class CreateTourneyScreen
+    partial class CreateTourneyPage
     {
         /// <summary> 
         /// Required designer variable.

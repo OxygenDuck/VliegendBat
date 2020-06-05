@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace VliegendBat
 {
-    public partial class CreateTourneyScreen : UserControl
+    public partial class CreateTourneyPage : UserControl
     {
-        public CreateTourneyScreen()
+        /// <summary>
+        /// Create a new Create Tourney page
+        /// </summary>
+        public CreateTourneyPage()
         {
             InitializeComponent();
         }

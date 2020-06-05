@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace VliegendBat
 {
-    public partial class ManageMatchScreen : UserControl
+    public partial class ManageMatchPage : UserControl
     {
         //The tourney to reference
         private Tourney tourney = null;
         
         /// <summary>
-        /// Create a new instance of the Manage Match Screen
+        /// Create a new Manage Match Page
         /// </summary>
         /// <param name="tourney">The tourney for which to see all of the matches</param>
-        public ManageMatchScreen(Tourney tourney)
+        public ManageMatchPage(Tourney tourney)
         {
             InitializeComponent();
             this.tourney = tourney;

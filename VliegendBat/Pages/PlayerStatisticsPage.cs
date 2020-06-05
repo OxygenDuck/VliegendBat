@@ -16,7 +16,7 @@ namespace VliegendBat
         private Player player = null;
         
         /// <summary>
-        /// Create an instance of the UserStatistics page
+        /// Create a new UserStatistics page
         /// </summary>
         /// <param name="player">The player of which you want to see the statistics</param>
         public PlayerStatisticsPage(Player player)
@@ -24,12 +24,27 @@ namespace VliegendBat
             InitializeComponent();
 
             this.player = player;
+            UpdateStatistics();
         }
 
         //Button Click to return to dashboard
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            if (Program.fromPlayerManager)
+            {
+                MainWindow.SetPage(Pages.ManagePlayers);
+                return;
+            }
             MainWindow.SetPage(Pages.Dashboard);
+        }
+
+        /// <summary>
+        /// Update the statistics shown on screen with current information about the player referenced
+        /// </summary>
+        public void UpdateStatistics()
+        {
+            lblPlayerName.Text = player.name;
+            //TODO: the other statistics
         }
 
         //TODO: Literally everything for player statistics

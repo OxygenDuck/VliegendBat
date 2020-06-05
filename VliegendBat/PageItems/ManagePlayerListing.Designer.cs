@@ -1,6 +1,6 @@
 ﻿namespace VliegendBat
 {
-    partial class ManageUserListing
+    partial class ManagePlayerListing
     {
         /// <summary> 
         /// Required designer variable.

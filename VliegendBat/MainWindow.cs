@@ -27,7 +27,7 @@ namespace VliegendBat
         {
             InitializeComponent();
             //Set global reference to this form
-            Program.window = this;
+            Program.Window = this;
 
             //Show the Login page first
             SetPage(Pages.Login);
@@ -45,15 +45,15 @@ namespace VliegendBat
             {
                 case Pages.Login: control = new LoginScreen(); break;
                 case Pages.Dashboard: control = new Dashboard(); break;
-                case Pages.CreateTourney: control = new CreateTourneyScreen(); break;
-                case Pages.ManageTourney: control = new ManageTourneyScreen(); break;
-                case Pages.ManagePlayers: control = new ManagePlayerScreen(); break;
+                case Pages.CreateTourney: control = new CreateTourneyPage(); break;
+                case Pages.ManageTourney: control = new ManageTourneyPage(); break;
+                case Pages.ManagePlayers: control = new ManagePlayerPage(); break;
                 case Pages.Signup: control = new EnterTourneyPage(); break;
             }
 
             //Set page to panel
-            Program.window.pnlContent.Controls.Clear();
-            Program.window.pnlContent.Controls.Add(control);
+            Program.Window.pnlContent.Controls.Clear();
+            Program.Window.pnlContent.Controls.Add(control);
         }
 
         /// <summary>
@@ -63,11 +63,11 @@ namespace VliegendBat
         static public void SetPage(Tourney tourney)
         {
             //Get the correct usercontrol
-            UserControl control = new ManageMatchScreen(tourney);
+            UserControl control = new ManageMatchPage(tourney);
 
             //Set page to panel
-            Program.window.pnlContent.Controls.Clear();
-            Program.window.pnlContent.Controls.Add(control);
+            Program.Window.pnlContent.Controls.Clear();
+            Program.Window.pnlContent.Controls.Add(control);
         }
 
         /// <summary>
@@ -80,8 +80,8 @@ namespace VliegendBat
             UserControl control = new PlayerStatisticsPage(player);
 
             //Set page to panel
-            Program.window.pnlContent.Controls.Clear();
-            Program.window.pnlContent.Controls.Add(control);
+            Program.Window.pnlContent.Controls.Clear();
+            Program.Window.pnlContent.Controls.Add(control);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace VliegendBat
 {
-    partial class ManageMatchScreen
+    partial class ManageTourneyPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,35 +29,34 @@
         private void InitializeComponent()
         {
             this.btnReturn = new System.Windows.Forms.Button();
-            this.pnlMatchList = new System.Windows.Forms.Panel();
+            this.pnlTourneyList = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(353, 244);
+            this.btnReturn.Location = new System.Drawing.Point(185, 255);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(204, 44);
-            this.btnReturn.TabIndex = 5;
+            this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Terug";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // pnlMatchList
+            // pnlTourneyList
             // 
-            this.pnlMatchList.AutoScroll = true;
-            this.pnlMatchList.Location = new System.Drawing.Point(3, 3);
-            this.pnlMatchList.Name = "pnlMatchList";
-            this.pnlMatchList.Size = new System.Drawing.Size(898, 235);
-            this.pnlMatchList.TabIndex = 4;
+            this.pnlTourneyList.Location = new System.Drawing.Point(3, 3);
+            this.pnlTourneyList.Name = "pnlTourneyList";
+            this.pnlTourneyList.Size = new System.Drawing.Size(555, 235);
+            this.pnlTourneyList.TabIndex = 2;
             // 
-            // ManageMatchScreen
+            // ManageTourneyScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.pnlMatchList);
-            this.Name = "ManageMatchScreen";
-            this.Size = new System.Drawing.Size(904, 306);
+            this.Controls.Add(this.pnlTourneyList);
+            this.Name = "ManageTourneyScreen";
+            this.Size = new System.Drawing.Size(561, 312);
             this.ResumeLayout(false);
 
         }
@@ -65,6 +64,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.Panel pnlMatchList;
+        private System.Windows.Forms.Panel pnlTourneyList;
     }
 }

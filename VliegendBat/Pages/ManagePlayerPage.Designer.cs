@@ -1,6 +1,6 @@
 ﻿namespace VliegendBat
 {
-    partial class ManagePlayerScreen
+    partial class ManagePlayerPage
     {
         /// <summary> 
         /// Required designer variable.
