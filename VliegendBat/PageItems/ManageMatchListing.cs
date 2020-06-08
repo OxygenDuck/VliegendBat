@@ -38,6 +38,35 @@ namespace VliegendBat
         public void UpdateListing()
         {
             //TODO: Manage anything at all in here
+
+            if (match.players[0] != null)
+            {
+                lblPlayerName1.Text = match.players[0].name;
+            }
+            else
+            {
+                lblPlayerName1.Text = "-";
+            }
+
+            if (match.players[1] != null)
+            {
+                lblPlayerName2.Text = match.players[1].name;
+            }
+            else
+            {
+                lblPlayerName2.Text = "-";
+            }
+
+            lblPlayers.Text = lblPlayerName1.Text + ", " + lblPlayerName2.Text;
+            lblStatus.Text = match.matchState.ToString();
+            if (match.winner != null)
+            {
+                lblWinner.Text = match.winner.name;
+            }
+            else
+            {
+                lblWinner.Text = "-";
+            }
         }
 
         //Button click to expand the item

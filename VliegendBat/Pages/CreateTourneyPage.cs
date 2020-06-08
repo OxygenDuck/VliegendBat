@@ -34,7 +34,7 @@ namespace VliegendBat
             }
 
             //TODO: Save Tourney to storage
-            Program.Tourneys.Add(new Tourney(tbxName.Text, "NotStarted"));
+            Program.Tourneys.Add(new Tourney(tbxName.Text));
             MainWindow.SetPage(Pages.Dashboard);
         }
 

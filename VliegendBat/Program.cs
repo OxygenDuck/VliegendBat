@@ -11,7 +11,7 @@ namespace VliegendBat
     /// <summary>
     /// Program created by Peter Janssen, IC17ao.e
     /// Last update 8th of June 2020
-    /// Version 0.1.3
+    /// Version 0.1.4
     /// </summary>
     static class Program
     {
@@ -57,8 +57,10 @@ namespace VliegendBat
             {
                 //Create new admin: both username and password are "admin"
                 string password = StringCipher.Encrypt("admin", "admin");
-                Player admin = new Player("admin", password);
-                admin.isAdmin = true;
+                Player admin = new Player("admin", password)
+                {
+                    isAdmin = true
+                };
                 Players.Add(admin);
             }
 

@@ -10,7 +10,9 @@ namespace VliegendBat
     {
         Undecided,
         NotStarted,
-        Finished
+        Skip,
+        Finished,
+        RoundFinished
     }
 
     public class Match
@@ -18,5 +20,6 @@ namespace VliegendBat
         public bool[] games = { false, false, false, false, false };
         public MatchState matchState = MatchState.Undecided;
         public Player[] players = { null, null };
+        public Player winner = null;
     }
 }
