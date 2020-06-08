@@ -55,6 +55,7 @@
             this.btnRemoveUser.TabIndex = 1;
             this.btnRemoveUser.Text = "Verwijderen";
             this.btnRemoveUser.UseVisualStyleBackColor = true;
+            this.btnRemoveUser.Click += new System.EventHandler(this.btnRemoveUser_Click);
             // 
             // lblIndex
             // 
@@ -104,7 +105,7 @@
             this.cbxRights.Size = new System.Drawing.Size(128, 21);
             this.cbxRights.TabIndex = 6;
             // 
-            // ManageUserListing
+            // ManagePlayerListing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,7 +116,7 @@
             this.Controls.Add(this.lblIndex);
             this.Controls.Add(this.btnRemoveUser);
             this.Controls.Add(this.btnSaveChanges);
-            this.Name = "ManageUserListing";
+            this.Name = "ManagePlayerListing";
             this.Size = new System.Drawing.Size(733, 77);
             this.ResumeLayout(false);
             this.PerformLayout();

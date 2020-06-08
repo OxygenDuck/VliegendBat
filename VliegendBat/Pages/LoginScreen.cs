@@ -12,30 +12,48 @@ namespace VliegendBat
 {
     public partial class LoginScreen : UserControl
     {
+        /// <summary>
+        /// Create a new instance of the login screen
+        /// </summary>
         public LoginScreen()
         {
             InitializeComponent();
         }
 
+        // Button click to log in
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //TODO: Check account before granting access
-            //DEBUG: just create a new player for now, replace with actual players later
+            //Check account before granting access
             foreach (Player player in Program.Players)
             {
                 if (player.name == tbxUsername.Text)
                 {
-                    Program.CurrentPlayer = player;
-                    break;
+                    if (Login(player))
+                    {
+                        MainWindow.SetPage(Pages.Dashboard);
+                    }
+                    return;
                 }
             }
-            if (Program.CurrentPlayer == null)
+
+            MessageBox.Show("Er bestaat geen speler genaamd " + tbxUsername.Text, "Waarschuwing");
+        }
+
+        /// <summary>
+        /// Log in the given player
+        /// </summary>
+        /// <param name="player"></param>
+        /// <returns>true if the player has been logged in</returns>
+        private bool Login(Player player)
+        {
+            if (tbxPassword.Text != StringCipher.Decrypt(player.password, player.name))
             {
-                Program.CurrentPlayer = new Player(tbxUsername.Text);
-                Program.Players.Add(Program.CurrentPlayer);
+                MessageBox.Show("De gebruikersnaam en wachtwoord komen niet overeen", "Waarschuwing");
+                return false;
             }
 
-            MainWindow.SetPage(Pages.Dashboard);
+            Program.CurrentPlayer = player;
+            return true;
         }
     }
 }

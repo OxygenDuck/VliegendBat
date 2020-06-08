@@ -51,6 +51,12 @@
   <ItemGroup>
     <Compile Include="Classes\Match.cs" />
     <Compile Include="Classes\Player.cs" />
+    <Compile Include="PageItems\CreatePlayerScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageItems\CreatePlayerScreen.Designer.cs">
+      <DependentUpon>CreatePlayerScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageItems\ManageMatchListing.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,6 +138,10 @@
       <DependentUpon>PlayerStatisticsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Tourney.cs" />
+    <Compile Include="StringCipher.cs" />
+    <EmbeddedResource Include="PageItems\CreatePlayerScreen.resx">
+      <DependentUpon>CreatePlayerScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PageItems\ManageMatchListing.resx">
       <DependentUpon>ManageMatchListing.cs</DependentUpon>
     </EmbeddedResource>

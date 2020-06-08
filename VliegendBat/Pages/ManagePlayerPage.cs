@@ -23,6 +23,9 @@ namespace VliegendBat
             Program.fromPlayerManager = true;
         }
 
+        /// <summary>
+        /// Update Listing on the page
+        /// </summary>
         public void UpdateListing()
         {
             pnlPlayerList.Controls.Clear();
@@ -50,6 +53,13 @@ namespace VliegendBat
         {
             Program.fromPlayerManager = false;
             MainWindow.SetPage(Pages.Dashboard);
+        }
+
+        //Button click to open create player screen
+        private void btnCreatePlayer_Click(object sender, EventArgs e)
+        {
+            pnlPlayerList.Controls.Clear();
+            pnlPlayerList.Controls.Add(new CreatePlayerScreen());
         }
     }
 }

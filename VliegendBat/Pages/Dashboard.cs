@@ -15,6 +15,9 @@ namespace VliegendBat
         public Dashboard()
         {
             InitializeComponent();
+
+            //Enable admin pages if the user is an admin
+            grbAdmin.Enabled = Program.CurrentPlayer.isAdmin;
         }
 
         //Button Click to go to Create tourney Page

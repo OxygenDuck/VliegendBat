@@ -27,6 +27,9 @@ namespace VliegendBat
             UpdateListing();
         }
 
+        /// <summary>
+        /// Update listing
+        /// </summary>
         public void UpdateListing()
         {
             lblPlayerName.Text = player.name;
@@ -43,15 +46,38 @@ namespace VliegendBat
         //Button click to save changes
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
-            //TODO: change settings
-            //TODO: Save changes to storage
+            //change settings
+            player.isAdmin = Convert.ToBoolean(cbxRights.SelectedIndex);
+
+            //Save changes to storage
             Program.SavePlayers();
+
+            //TODO: Update list on main page without resetting the scroll
         }
 
         //Button click to show user statistics
         private void btnShowStatistics_Click(object sender, EventArgs e)
         {
             MainWindow.SetPage(player);
+        }
+        
+        //Button click to remove player
+        private void btnRemoveUser_Click(object sender, EventArgs e)
+        {
+            //Ask for approval
+            DialogResult result = MessageBox.Show("Weet je zeker dat je deze speler wil verwijderen?", "Waarschuwing", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                //Remove player
+                Program.Players.Remove(player);
+                MessageBox.Show("De speler is verwijderd", "Informatie");
+
+                //Save players
+                Program.SavePlayers();
+
+                //TODO: check all tourneys and matches to see if the player was registered anywhere
+                //TODO: Update list on main page without resetting the scroll
+            }
         }
     }
 }

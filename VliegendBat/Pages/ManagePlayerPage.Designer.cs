@@ -30,11 +30,12 @@
         {
             this.btnReturn = new System.Windows.Forms.Button();
             this.pnlPlayerList = new System.Windows.Forms.Panel();
+            this.btnCreatePlayer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(325, 253);
+            this.btnReturn.Location = new System.Drawing.Point(428, 252);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(204, 44);
             this.btnReturn.TabIndex = 5;
@@ -50,13 +51,24 @@
             this.pnlPlayerList.Size = new System.Drawing.Size(829, 235);
             this.pnlPlayerList.TabIndex = 4;
             // 
-            // ManagePlayerScreen
+            // btnCreatePlayer
+            // 
+            this.btnCreatePlayer.Location = new System.Drawing.Point(218, 252);
+            this.btnCreatePlayer.Name = "btnCreatePlayer";
+            this.btnCreatePlayer.Size = new System.Drawing.Size(204, 44);
+            this.btnCreatePlayer.TabIndex = 6;
+            this.btnCreatePlayer.Text = "Creëer";
+            this.btnCreatePlayer.UseVisualStyleBackColor = true;
+            this.btnCreatePlayer.Click += new System.EventHandler(this.btnCreatePlayer_Click);
+            // 
+            // ManagePlayerPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCreatePlayer);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pnlPlayerList);
-            this.Name = "ManagePlayerScreen";
+            this.Name = "ManagePlayerPage";
             this.Size = new System.Drawing.Size(835, 313);
             this.ResumeLayout(false);
 
@@ -66,5 +78,6 @@
 
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Panel pnlPlayerList;
+        private System.Windows.Forms.Button btnCreatePlayer;
     }
 }

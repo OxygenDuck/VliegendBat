@@ -9,11 +9,18 @@ namespace VliegendBat
     public class Player
     {
         public string name = null;
+        public string password = null;
         public bool isAdmin = false;
 
-        public Player(string Name)
+        /// <summary>
+        /// Creates a new player object
+        /// </summary>
+        /// <param name="Name">The username of the player</param>
+        /// <param name="Password">The password of the player, this should be an enctypted string</param>
+        public Player(string Name, string Password)
         {
             name = Name;
+            password = Password;
         }
     }
 }
