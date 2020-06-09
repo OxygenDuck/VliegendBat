@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace VliegendBat
 {
+    /// <summary>
+    /// Enumerator for the state of a match
+    /// </summary>
     public enum MatchState
     {
         Undecided,
@@ -15,6 +18,9 @@ namespace VliegendBat
         RoundFinished
     }
 
+    /// <summary>
+    /// Create a new match
+    /// </summary>
     public class Match
     {
         public bool[] gamesPlayer1 = { false, false, false, false, false };

@@ -12,12 +12,18 @@ namespace VliegendBat
 {
     public partial class EnterTourneyPage : UserControl
     {
+        /// <summary>
+        /// Creates a new listing of the enter tourney page
+        /// </summary>
         public EnterTourneyPage()
         {
             InitializeComponent();
             UpdateListing();
         }
 
+        /// <summary>
+        /// Updates the listing of the page
+        /// </summary>
         public void UpdateListing()
         {
             pnlTourneyList.Controls.Clear();

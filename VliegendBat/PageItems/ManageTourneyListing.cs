@@ -50,5 +50,15 @@ namespace VliegendBat
         {
             MainWindow.SetPage(tourney);
         }
+
+        //Button click to remove tourney
+        private void btnRemoveTourney_Click(object sender, EventArgs e)
+        {
+            Program.Tourneys.Remove(tourney);
+            UpdateListing();
+
+            //Save changes to storage
+            Program.SaveTourneys();
+        }
     }
 }

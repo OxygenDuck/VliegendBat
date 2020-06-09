@@ -13,6 +13,11 @@ namespace VliegendBat
     public partial class SignupTourneyListing : UserControl
     {
         Tourney tourney = null;
+
+        /// <summary>
+        /// Creates a new listing for the tourney signup page
+        /// </summary>
+        /// <param name="tourney">The tourney to associate with this listing</param>
         public SignupTourneyListing(Tourney tourney)
         {
             InitializeComponent();
@@ -22,7 +27,9 @@ namespace VliegendBat
             UpdateListing();
         }
 
-        //Update List item
+        /// <summary>
+        /// Update List item
+        /// </summary>
         public void UpdateListing()
         {
             lblTourneyName.Text = tourney.name;

@@ -30,7 +30,7 @@
         {
             this.lblPlayerName = new System.Windows.Forms.Label();
             this.lblMatchesPlayed = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlTourneyListing = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.Button();
             this.lblMatchesWon = new System.Windows.Forms.Label();
             this.lblMatchesLost = new System.Windows.Forms.Label();
@@ -66,12 +66,13 @@
             this.lblMatchesPlayed.TabIndex = 1;
             this.lblMatchesPlayed.Text = "--MatchesPlayed--";
             // 
-            // panel1
+            // pnlTourneyListing
             // 
-            this.panel1.Location = new System.Drawing.Point(261, 33);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(505, 238);
-            this.panel1.TabIndex = 2;
+            this.pnlTourneyListing.AutoScroll = true;
+            this.pnlTourneyListing.Location = new System.Drawing.Point(261, 33);
+            this.pnlTourneyListing.Name = "pnlTourneyListing";
+            this.pnlTourneyListing.Size = new System.Drawing.Size(505, 238);
+            this.pnlTourneyListing.TabIndex = 2;
             // 
             // btnReturn
             // 
@@ -220,7 +221,7 @@
             this.Controls.Add(this.lblMatchesLost);
             this.Controls.Add(this.lblMatchesWon);
             this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlTourneyListing);
             this.Controls.Add(this.lblMatchesPlayed);
             this.Controls.Add(this.lblPlayerName);
             this.Name = "PlayerStatisticsPage";
@@ -234,7 +235,7 @@
 
         private System.Windows.Forms.Label lblPlayerName;
         private System.Windows.Forms.Label lblMatchesPlayed;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlTourneyListing;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Label lblMatchesWon;
         private System.Windows.Forms.Label lblMatchesLost;

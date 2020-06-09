@@ -127,6 +127,9 @@ namespace VliegendBat
 
             //Update list in page
             ListFunctionPointer.DynamicInvoke();
+
+            //Save changes to storage
+            Program.SaveTourneys();
         }
 
         /// <summary>
@@ -265,6 +268,7 @@ namespace VliegendBat
                 }
 
                 //Have the match be decided and saved
+                //TODO: Refactor this
                 btnFinish_Click(null, null);
             }
         }

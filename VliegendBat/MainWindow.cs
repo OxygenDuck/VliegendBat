@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace VliegendBat
 {
+    /// <summary>
+    /// Enumerators to use when creating a new page
+    /// </summary>
     public enum Pages
     {
         Login,
@@ -22,7 +25,9 @@ namespace VliegendBat
 
     public partial class MainWindow : Form
     {
-        //TODO: Set description for each page
+        /// <summary>
+        /// Creates the main window to use
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

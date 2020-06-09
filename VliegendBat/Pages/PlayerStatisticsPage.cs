@@ -10,6 +10,71 @@ using System.Windows.Forms;
 
 namespace VliegendBat
 {
+    public class PlayerStatistics
+    {
+        //The player associated with the object
+        public Player player = null;
+
+        //The individual statistics
+        public int matchesWon = 0;
+        public int matchesLost = 0;
+        public int gamesWon = 0;
+        public int gamesLost = 0;
+
+        public int rankScore = 0;
+
+        /// <summary>
+        /// Create a new player statistics object
+        /// </summary>
+        /// <param name="player">The player associated with the statistics</param>
+        public PlayerStatistics(Player player)
+        {
+            this.player = player;
+            CalculateStatistics();
+        }
+
+        /// <summary>
+        /// Calculate the statistics
+        /// </summary>
+        private void CalculateStatistics()
+        {
+            //search for each match this player is in
+            foreach (Tourney tourney in Program.Tourneys)
+            {
+                if (tourney.players.Contains(player))
+                {
+                    foreach (Match match in tourney.matches)
+                    {
+                        if (match.players.Contains(player))
+                        {
+                            //Look if player won or lost a match statistics
+                            if (match.winner == player) matchesWon++;
+                            else if (match.winner != null) matchesLost++;
+
+                            for (int i = 0; i < match.gamesPlayer1.Length; i++)
+                            {
+                                if (match.gamesPlayer1[i] && !match.gamesPlayer2[i]) //Match won by player 1
+                                {
+                                    if (match.players[0] == player) gamesWon++;
+                                    else gamesLost++;
+                                }
+                                else if (!match.gamesPlayer1[i] && match.gamesPlayer2[i]) //Match won by player 2
+                                {
+                                    if (match.players[1] == player) gamesWon++;
+                                    else gamesLost++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //calculate rankscore
+            rankScore = matchesWon;
+            rankScore *= 3; //Match score weighs heavier than game score
+            rankScore -= gamesLost;
+        }
+    }
+
     public partial class PlayerStatisticsPage : UserControl
     {
         //Player object to reference
@@ -25,6 +90,7 @@ namespace VliegendBat
 
             this.player = player;
             UpdateStatistics();
+            UpdateListing();
         }
 
         //Button Click to return to dashboard
@@ -37,16 +103,92 @@ namespace VliegendBat
             }
             MainWindow.SetPage(Pages.Dashboard);
         }
-//TODO: Literally everything for player statistics
+        
         /// <summary>
         /// Update the statistics shown on screen with current information about the player referenced
         /// </summary>
         public void UpdateStatistics()
         {
+            //First generate statistics for every player (all players are calculated to determine the rank
+            List<PlayerStatistics> allStatistics = new List<PlayerStatistics>();
+            foreach (Player existingPlayer in Program.Players)
+            {
+                PlayerStatistics newStatistics = new PlayerStatistics(existingPlayer);
+                allStatistics.Add(newStatistics);
+            }
+
+            //Show all the values for this player
             lblPlayerName.Text = player.name;
-            //TODO: the other statistics
+
+            foreach (PlayerStatistics statistics in allStatistics)
+            {
+                //Get this player's statistics
+                if (statistics.player == player)
+                {
+                    lblMatchesPlayed.Text = Convert.ToString(statistics.matchesWon + statistics.matchesLost);
+                    lblMatchesWon.Text = statistics.matchesWon.ToString();
+                    lblMatchesLost.Text = statistics.matchesLost.ToString();
+                    lblGamesPlayed.Text = Convert.ToString(statistics.gamesWon + statistics.gamesLost);
+                    lblGamesWon.Text = statistics.gamesWon.ToString();
+                    lblGamesLost.Text = statistics.gamesLost.ToString();
+                    break;
+                }
+            }
+
+            //Determine rank
+            lblRank.Text = DetermineRank(allStatistics).ToString() + "/" + Program.Players.Count;
         }
 
-        
+        /// <summary>
+        /// Determine the rank of this player
+        /// </summary>
+        private int DetermineRank(List<PlayerStatistics> StatisticsList)
+        {
+            StatisticsList = StatisticsList.OrderBy(statistics => statistics.rankScore).ToList();
+            List<int> Rank = new List<int>();
+            for (int i = 0; i < StatisticsList.Count; i++)
+            {
+                Rank.Add(i + 1); //Rank is its position in the list
+
+                //Excluding the first in the list, check if the score is the same as the previous in the list, if so, make the rank the same
+                if (i > 0 && StatisticsList[i].rankScore == StatisticsList[i - 1].rankScore) Rank[i] = Rank[i - 1];
+
+                //If the current player is reached, send his rank number
+                if (StatisticsList[i].player == player)
+                {
+                    return Rank[i];
+                }
+            }
+            return 1;
+        }
+
+        /// <summary>
+        /// Update the tourney listing
+        /// </summary>
+        private void UpdateListing()
+        {
+            pnlTourneyListing.Controls.Clear();
+            int tourneysFound = 0;
+            foreach (Tourney tourney in Program.Tourneys)
+            {
+                if (tourney.players.Contains(player))
+                {
+                    StatisticsTourneyListing newListing = new StatisticsTourneyListing(tourney, player);
+                    pnlTourneyListing.Controls.Add(newListing);
+
+                    newListing.Location = new Point(0, newListing.Height * tourneysFound);
+
+                    if (tourneysFound % 2 == 0)
+                    {
+                        newListing.BackColor = Color.FromArgb(255, 255, 255);
+                    }
+                    else
+                    {
+                        newListing.BackColor = Color.FromArgb(200, 200, 200);
+                    }
+                    tourneysFound++;
+                }
+            }
+        }
     }
 }

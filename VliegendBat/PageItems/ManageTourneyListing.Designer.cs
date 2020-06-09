@@ -130,6 +130,7 @@
             this.btnRemoveTourney.TabIndex = 16;
             this.btnRemoveTourney.Text = "Verwijderen";
             this.btnRemoveTourney.UseVisualStyleBackColor = true;
+            this.btnRemoveTourney.Click += new System.EventHandler(this.btnRemoveTourney_Click);
             // 
             // ManageTourneyListing
             // 

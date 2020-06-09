@@ -42,7 +42,7 @@ namespace VliegendBat
         /// <summary>
         /// Log in the given player
         /// </summary>
-        /// <param name="player"></param>
+        /// <param name="player">The player to log in</param>
         /// <returns>true if the player has been logged in</returns>
         private bool Login(Player player)
         {

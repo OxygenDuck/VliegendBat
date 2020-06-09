@@ -75,7 +75,7 @@ namespace VliegendBat
                 //Save players
                 Program.SavePlayers();
 
-                //TODO: check all tourneys and matches to see if the player was registered anywhere
+                //TODO: CAN BE IGNORED: check all tourneys and matches to see if the player was registered anywhere
                 //TODO: Update list on main page without resetting the scroll
             }
         }

@@ -34,7 +34,7 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(185, 255);
+            this.btnReturn.Location = new System.Drawing.Point(369, 253);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(204, 44);
             this.btnReturn.TabIndex = 3;
@@ -44,19 +44,20 @@
             // 
             // pnlTourneyList
             // 
+            this.pnlTourneyList.AutoScroll = true;
             this.pnlTourneyList.Location = new System.Drawing.Point(3, 3);
             this.pnlTourneyList.Name = "pnlTourneyList";
-            this.pnlTourneyList.Size = new System.Drawing.Size(555, 235);
+            this.pnlTourneyList.Size = new System.Drawing.Size(923, 235);
             this.pnlTourneyList.TabIndex = 2;
             // 
-            // ManageTourneyScreen
+            // ManageTourneyPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pnlTourneyList);
-            this.Name = "ManageTourneyScreen";
-            this.Size = new System.Drawing.Size(561, 312);
+            this.Name = "ManageTourneyPage";
+            this.Size = new System.Drawing.Size(929, 312);
             this.ResumeLayout(false);
 
         }

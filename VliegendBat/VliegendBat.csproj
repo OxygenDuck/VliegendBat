@@ -81,6 +81,12 @@
     <Compile Include="PageItems\SignupTourneyListing.Designer.cs">
       <DependentUpon>SignupTourneyListing.cs</DependentUpon>
     </Compile>
+    <Compile Include="PageItems\StatisticsTourneyListing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageItems\StatisticsTourneyListing.Designer.cs">
+      <DependentUpon>StatisticsTourneyListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CreateTourneyPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,9 +137,7 @@
     <Compile Include="Pages\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PlayerStatisticsPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Pages\PlayerStatisticsPage.cs" />
     <Compile Include="Pages\PlayerStatisticsPage.Designer.cs">
       <DependentUpon>PlayerStatisticsPage.cs</DependentUpon>
     </Compile>
@@ -153,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PageItems\SignupTourneyListing.resx">
       <DependentUpon>SignupTourneyListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageItems\StatisticsTourneyListing.resx">
+      <DependentUpon>StatisticsTourneyListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\CreateTourneyPage.resx">
       <DependentUpon>CreateTourneyPage.cs</DependentUpon>

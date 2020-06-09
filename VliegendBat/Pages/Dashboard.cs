@@ -12,6 +12,9 @@ namespace VliegendBat
 {
     public partial class Dashboard : UserControl
     {
+        /// <summary>
+        /// Creates a new instance of the dashboard page
+        /// </summary>
         public Dashboard()
         {
             InitializeComponent();
