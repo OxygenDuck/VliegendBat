@@ -38,31 +38,34 @@
             this.lblIndex = new System.Windows.Forms.Label();
             this.lblTourneyName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblPlayerName1 = new System.Windows.Forms.Label();
-            this.lblPlayerName2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtGame1P1 = new System.Windows.Forms.RadioButton();
-            this.rbtGame1P2 = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rbtGame2P2 = new System.Windows.Forms.RadioButton();
-            this.rbtGame2P1 = new System.Windows.Forms.RadioButton();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.rbtGame3P2 = new System.Windows.Forms.RadioButton();
-            this.rbtGame3P1 = new System.Windows.Forms.RadioButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.rbtGame4P2 = new System.Windows.Forms.RadioButton();
-            this.rbtGame4P1 = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.rbtGame5P2 = new System.Windows.Forms.RadioButton();
             this.rbtGame5P1 = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.rbtGame4P2 = new System.Windows.Forms.RadioButton();
+            this.rbtGame4P1 = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rbtGame3P2 = new System.Windows.Forms.RadioButton();
+            this.rbtGame3P1 = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbtGame2P2 = new System.Windows.Forms.RadioButton();
+            this.rbtGame2P1 = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbtGame1P2 = new System.Windows.Forms.RadioButton();
+            this.rbtGame1P1 = new System.Windows.Forms.RadioButton();
+            this.lblPlayerName2 = new System.Windows.Forms.Label();
+            this.lblPlayerName1 = new System.Windows.Forms.Label();
+            this.btnDisqualifyPlayer1 = new System.Windows.Forms.Button();
+            this.btnDisqualifyPlayer2 = new System.Windows.Forms.Button();
+            this.btnFinish = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblStatus
@@ -150,6 +153,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.btnFinish);
+            this.panel1.Controls.Add(this.btnDisqualifyPlayer2);
+            this.panel1.Controls.Add(this.btnDisqualifyPlayer1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.lblPlayerName2);
             this.panel1.Controls.Add(this.lblPlayerName1);
@@ -157,24 +163,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 75);
             this.panel1.TabIndex = 26;
-            // 
-            // lblPlayerName1
-            // 
-            this.lblPlayerName1.AutoSize = true;
-            this.lblPlayerName1.Location = new System.Drawing.Point(8, 29);
-            this.lblPlayerName1.Name = "lblPlayerName1";
-            this.lblPlayerName1.Size = new System.Drawing.Size(81, 13);
-            this.lblPlayerName1.TabIndex = 27;
-            this.lblPlayerName1.Text = "--Spelernaam1--";
-            // 
-            // lblPlayerName2
-            // 
-            this.lblPlayerName2.AutoSize = true;
-            this.lblPlayerName2.Location = new System.Drawing.Point(8, 46);
-            this.lblPlayerName2.Name = "lblPlayerName2";
-            this.lblPlayerName2.Size = new System.Drawing.Size(81, 13);
-            this.lblPlayerName2.TabIndex = 28;
-            this.lblPlayerName2.Text = "--Spelernaam2--";
             // 
             // groupBox1
             // 
@@ -190,134 +178,6 @@
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Games";
-            // 
-            // rbtGame1P1
-            // 
-            this.rbtGame1P1.AutoSize = true;
-            this.rbtGame1P1.Location = new System.Drawing.Point(8, 13);
-            this.rbtGame1P1.Name = "rbtGame1P1";
-            this.rbtGame1P1.Size = new System.Drawing.Size(14, 13);
-            this.rbtGame1P1.TabIndex = 0;
-            this.rbtGame1P1.TabStop = true;
-            this.rbtGame1P1.UseVisualStyleBackColor = true;
-            // 
-            // rbtGame1P2
-            // 
-            this.rbtGame1P2.AutoSize = true;
-            this.rbtGame1P2.Location = new System.Drawing.Point(8, 30);
-            this.rbtGame1P2.Name = "rbtGame1P2";
-            this.rbtGame1P2.Size = new System.Drawing.Size(14, 13);
-            this.rbtGame1P2.TabIndex = 1;
-            this.rbtGame1P2.TabStop = true;
-            this.rbtGame1P2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox2.Controls.Add(this.rbtGame1P2);
-            this.groupBox2.Controls.Add(this.rbtGame1P1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 16);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(30, 51);
-            this.groupBox2.TabIndex = 30;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "1";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox3.Controls.Add(this.rbtGame2P2);
-            this.groupBox3.Controls.Add(this.rbtGame2P1);
-            this.groupBox3.Location = new System.Drawing.Point(42, 16);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(30, 51);
-            this.groupBox3.TabIndex = 31;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "2";
-            // 
-            // rbtGame2P2
-            // 
-            this.rbtGame2P2.AutoSize = true;
-            this.rbtGame2P2.Location = new System.Drawing.Point(8, 30);
-            this.rbtGame2P2.Name = "rbtGame2P2";
-            this.rbtGame2P2.Size = new System.Drawing.Size(14, 13);
-            this.rbtGame2P2.TabIndex = 1;
-            this.rbtGame2P2.TabStop = true;
-            this.rbtGame2P2.UseVisualStyleBackColor = true;
-            // 
-            // rbtGame2P1
-            // 
-            this.rbtGame2P1.AutoSize = true;
-            this.rbtGame2P1.Location = new System.Drawing.Point(8, 13);
-            this.rbtGame2P1.Name = "rbtGame2P1";
-            this.rbtGame2P1.Size = new System.Drawing.Size(14, 13);
-            this.rbtGame2P1.TabIndex = 0;
-            this.rbtGame2P1.TabStop = true;
-            this.rbtGame2P1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox4.Controls.Add(this.rbtGame3P2);
-            this.groupBox4.Controls.Add(this.rbtGame3P1);
-            this.groupBox4.Location = new System.Drawing.Point(78, 16);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(30, 51);
-            this.groupBox4.TabIndex = 32;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "3";
-            // 
-            // rbtGame3P2
-            // 
-            this.rbtGame3P2.AutoSize = true;
-            this.rbtGame3P2.Location = new System.Drawing.Point(8, 30);
-            this.rbtGame3P2.Name = "rbtGame3P2";
-            this.rbtGame3P2.Size = new System.Drawing.Size(14, 13);
-            this.rbtGame3P2.TabIndex = 1;
-            this.rbtGame3P2.TabStop = true;
-            this.rbtGame3P2.UseVisualStyleBackColor = true;
-            // 
-            // rbtGame3P1
-            // 
-            this.rbtGame3P1.AutoSize = true;
-            this.rbtGame3P1.Location = new System.Drawing.Point(8, 13);
-            this.rbtGame3P1.Name = "rbtGame3P1";
-            this.rbtGame3P1.Size = new System.Drawing.Size(14, 13);
-            this.rbtGame3P1.TabIndex = 0;
-            this.rbtGame3P1.TabStop = true;
-            this.rbtGame3P1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox5.Controls.Add(this.rbtGame4P2);
-            this.groupBox5.Controls.Add(this.rbtGame4P1);
-            this.groupBox5.Location = new System.Drawing.Point(114, 16);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(30, 51);
-            this.groupBox5.TabIndex = 32;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "4";
-            // 
-            // rbtGame4P2
-            // 
-            this.rbtGame4P2.AutoSize = true;
-            this.rbtGame4P2.Location = new System.Drawing.Point(8, 30);
-            this.rbtGame4P2.Name = "rbtGame4P2";
-            this.rbtGame4P2.Size = new System.Drawing.Size(14, 13);
-            this.rbtGame4P2.TabIndex = 1;
-            this.rbtGame4P2.TabStop = true;
-            this.rbtGame4P2.UseVisualStyleBackColor = true;
-            // 
-            // rbtGame4P1
-            // 
-            this.rbtGame4P1.AutoSize = true;
-            this.rbtGame4P1.Location = new System.Drawing.Point(8, 13);
-            this.rbtGame4P1.Name = "rbtGame4P1";
-            this.rbtGame4P1.Size = new System.Drawing.Size(14, 13);
-            this.rbtGame4P1.TabIndex = 0;
-            this.rbtGame4P1.TabStop = true;
-            this.rbtGame4P1.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
@@ -351,6 +211,182 @@
             this.rbtGame5P1.TabStop = true;
             this.rbtGame5P1.UseVisualStyleBackColor = true;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.groupBox5.Controls.Add(this.rbtGame4P2);
+            this.groupBox5.Controls.Add(this.rbtGame4P1);
+            this.groupBox5.Location = new System.Drawing.Point(114, 16);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(30, 51);
+            this.groupBox5.TabIndex = 32;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "4";
+            // 
+            // rbtGame4P2
+            // 
+            this.rbtGame4P2.AutoSize = true;
+            this.rbtGame4P2.Location = new System.Drawing.Point(8, 30);
+            this.rbtGame4P2.Name = "rbtGame4P2";
+            this.rbtGame4P2.Size = new System.Drawing.Size(14, 13);
+            this.rbtGame4P2.TabIndex = 1;
+            this.rbtGame4P2.TabStop = true;
+            this.rbtGame4P2.UseVisualStyleBackColor = true;
+            // 
+            // rbtGame4P1
+            // 
+            this.rbtGame4P1.AutoSize = true;
+            this.rbtGame4P1.Location = new System.Drawing.Point(8, 13);
+            this.rbtGame4P1.Name = "rbtGame4P1";
+            this.rbtGame4P1.Size = new System.Drawing.Size(14, 13);
+            this.rbtGame4P1.TabIndex = 0;
+            this.rbtGame4P1.TabStop = true;
+            this.rbtGame4P1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.groupBox4.Controls.Add(this.rbtGame3P2);
+            this.groupBox4.Controls.Add(this.rbtGame3P1);
+            this.groupBox4.Location = new System.Drawing.Point(78, 16);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(30, 51);
+            this.groupBox4.TabIndex = 32;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "3";
+            // 
+            // rbtGame3P2
+            // 
+            this.rbtGame3P2.AutoSize = true;
+            this.rbtGame3P2.Location = new System.Drawing.Point(8, 30);
+            this.rbtGame3P2.Name = "rbtGame3P2";
+            this.rbtGame3P2.Size = new System.Drawing.Size(14, 13);
+            this.rbtGame3P2.TabIndex = 1;
+            this.rbtGame3P2.TabStop = true;
+            this.rbtGame3P2.UseVisualStyleBackColor = true;
+            // 
+            // rbtGame3P1
+            // 
+            this.rbtGame3P1.AutoSize = true;
+            this.rbtGame3P1.Location = new System.Drawing.Point(8, 13);
+            this.rbtGame3P1.Name = "rbtGame3P1";
+            this.rbtGame3P1.Size = new System.Drawing.Size(14, 13);
+            this.rbtGame3P1.TabIndex = 0;
+            this.rbtGame3P1.TabStop = true;
+            this.rbtGame3P1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.groupBox3.Controls.Add(this.rbtGame2P2);
+            this.groupBox3.Controls.Add(this.rbtGame2P1);
+            this.groupBox3.Location = new System.Drawing.Point(42, 16);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(30, 51);
+            this.groupBox3.TabIndex = 31;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "2";
+            // 
+            // rbtGame2P2
+            // 
+            this.rbtGame2P2.AutoSize = true;
+            this.rbtGame2P2.Location = new System.Drawing.Point(8, 30);
+            this.rbtGame2P2.Name = "rbtGame2P2";
+            this.rbtGame2P2.Size = new System.Drawing.Size(14, 13);
+            this.rbtGame2P2.TabIndex = 1;
+            this.rbtGame2P2.TabStop = true;
+            this.rbtGame2P2.UseVisualStyleBackColor = true;
+            // 
+            // rbtGame2P1
+            // 
+            this.rbtGame2P1.AutoSize = true;
+            this.rbtGame2P1.Location = new System.Drawing.Point(8, 13);
+            this.rbtGame2P1.Name = "rbtGame2P1";
+            this.rbtGame2P1.Size = new System.Drawing.Size(14, 13);
+            this.rbtGame2P1.TabIndex = 0;
+            this.rbtGame2P1.TabStop = true;
+            this.rbtGame2P1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.groupBox2.Controls.Add(this.rbtGame1P2);
+            this.groupBox2.Controls.Add(this.rbtGame1P1);
+            this.groupBox2.Location = new System.Drawing.Point(6, 16);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(30, 51);
+            this.groupBox2.TabIndex = 30;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "1";
+            // 
+            // rbtGame1P2
+            // 
+            this.rbtGame1P2.AutoSize = true;
+            this.rbtGame1P2.Location = new System.Drawing.Point(8, 30);
+            this.rbtGame1P2.Name = "rbtGame1P2";
+            this.rbtGame1P2.Size = new System.Drawing.Size(14, 13);
+            this.rbtGame1P2.TabIndex = 1;
+            this.rbtGame1P2.TabStop = true;
+            this.rbtGame1P2.UseVisualStyleBackColor = true;
+            // 
+            // rbtGame1P1
+            // 
+            this.rbtGame1P1.AutoSize = true;
+            this.rbtGame1P1.Location = new System.Drawing.Point(8, 13);
+            this.rbtGame1P1.Name = "rbtGame1P1";
+            this.rbtGame1P1.Size = new System.Drawing.Size(14, 13);
+            this.rbtGame1P1.TabIndex = 0;
+            this.rbtGame1P1.TabStop = true;
+            this.rbtGame1P1.UseVisualStyleBackColor = true;
+            // 
+            // lblPlayerName2
+            // 
+            this.lblPlayerName2.AutoSize = true;
+            this.lblPlayerName2.Location = new System.Drawing.Point(8, 46);
+            this.lblPlayerName2.Name = "lblPlayerName2";
+            this.lblPlayerName2.Size = new System.Drawing.Size(81, 13);
+            this.lblPlayerName2.TabIndex = 28;
+            this.lblPlayerName2.Text = "--Spelernaam2--";
+            // 
+            // lblPlayerName1
+            // 
+            this.lblPlayerName1.AutoSize = true;
+            this.lblPlayerName1.Location = new System.Drawing.Point(8, 29);
+            this.lblPlayerName1.Name = "lblPlayerName1";
+            this.lblPlayerName1.Size = new System.Drawing.Size(81, 13);
+            this.lblPlayerName1.TabIndex = 27;
+            this.lblPlayerName1.Text = "--Spelernaam1--";
+            // 
+            // btnDisqualifyPlayer1
+            // 
+            this.btnDisqualifyPlayer1.Location = new System.Drawing.Point(289, 22);
+            this.btnDisqualifyPlayer1.Name = "btnDisqualifyPlayer1";
+            this.btnDisqualifyPlayer1.Size = new System.Drawing.Size(115, 22);
+            this.btnDisqualifyPlayer1.TabIndex = 27;
+            this.btnDisqualifyPlayer1.Text = "Diskwalificeren";
+            this.btnDisqualifyPlayer1.UseVisualStyleBackColor = true;
+            this.btnDisqualifyPlayer1.Click += new System.EventHandler(this.btnDisqualifyPlayer1_Click);
+            // 
+            // btnDisqualifyPlayer2
+            // 
+            this.btnDisqualifyPlayer2.Location = new System.Drawing.Point(289, 42);
+            this.btnDisqualifyPlayer2.Name = "btnDisqualifyPlayer2";
+            this.btnDisqualifyPlayer2.Size = new System.Drawing.Size(115, 22);
+            this.btnDisqualifyPlayer2.TabIndex = 30;
+            this.btnDisqualifyPlayer2.Text = "Diskwalificeren";
+            this.btnDisqualifyPlayer2.UseVisualStyleBackColor = true;
+            this.btnDisqualifyPlayer2.Click += new System.EventHandler(this.btnDisqualifyPlayer1_Click);
+            // 
+            // btnFinish
+            // 
+            this.btnFinish.Location = new System.Drawing.Point(638, 12);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(115, 51);
+            this.btnFinish.TabIndex = 27;
+            this.btnFinish.Text = "Afronden en Opslaan";
+            this.btnFinish.UseVisualStyleBackColor = true;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
             // ManageMatchListing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,16 +406,16 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,7 +431,7 @@
         private System.Windows.Forms.Label lblPlayers;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblIndex;
-        private System.Windows.Forms.Label lblTourneyName;
+        public System.Windows.Forms.Label lblTourneyName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblPlayerName2;
         private System.Windows.Forms.Label lblPlayerName1;
@@ -415,5 +451,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rbtGame1P2;
         private System.Windows.Forms.RadioButton rbtGame1P1;
+        private System.Windows.Forms.Button btnFinish;
+        private System.Windows.Forms.Button btnDisqualifyPlayer2;
+        private System.Windows.Forms.Button btnDisqualifyPlayer1;
     }
 }

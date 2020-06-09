@@ -17,7 +17,8 @@ namespace VliegendBat
 
     public class Match
     {
-        public bool[] games = { false, false, false, false, false };
+        public bool[] gamesPlayer1 = { false, false, false, false, false };
+        public bool[] gamesPlayer2 = { false, false, false, false, false };
         public MatchState matchState = MatchState.Undecided;
         public Player[] players = { null, null };
         public Player winner = null;

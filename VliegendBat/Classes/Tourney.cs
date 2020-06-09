@@ -63,14 +63,16 @@ namespace VliegendBat
         private void CalculateMatches()
         {
             List<Match> matchList = new List<Match>();
-            float winners = players.Count;
+            int playersLeft = players.Count;
+            double matchesInRound = playersLeft / 2;
+            matchesInRound = Math.Floor(matchesInRound);
             Random rng = new Random();
             Player[] playersInTourney = players.OrderBy(x => rng.Next()).ToArray();
 
-            for (int i = 0; winners != 0; i++)
+            for (int i = 0; playersLeft != 1; i++)
             {
                 //If uneven, create full amount of matches and skip one
-                if (winners % 2 != 0)
+                if (playersLeft % 2 != 0)
                 {
                     //Create match to skip
                     Match skipMatch = new Match()
@@ -88,10 +90,8 @@ namespace VliegendBat
                     matchList.Add(skipMatch);
 
                     //Create normal matches
-                    for (int j = 0; j < winners; j += 2)
+                    for (int j = 1; j < playersLeft; j += 2)
                     {
-                        if (j == 0) j++;
-
                         Match newMatch = new Match();
 
                         //Set players if this is the first itteration
@@ -108,7 +108,7 @@ namespace VliegendBat
                 else
                 {
                     //Create full amount of matches
-                    for (int j = 0; j < winners; j += 2)
+                    for (int j = 0; j < playersLeft; j += 2)
                     {
                         Match newMatch = new Match();
 
@@ -124,10 +124,16 @@ namespace VliegendBat
                     }
                 }
 
+                //Remove players left behind in current round
+                playersLeft -= (int)matchesInRound;
                 //Divide the winners
-                winners /= 2;
-                //Round winners down to a full number
-                winners = (float)Math.Floor(winners);
+                matchesInRound /= 2;
+                //Round winners down to a full number, if the result is 0, make it 1
+                matchesInRound = (float)Math.Floor(matchesInRound);
+                if (matchesInRound == 0)
+                {
+                    matchesInRound = 1;
+                }
             }
             matches = matchList;
         }
@@ -137,6 +143,7 @@ namespace VliegendBat
         {
             List<Player> matchWinners = new List<Player>();
             List<Match> matchesUnplayed = new List<Match>();
+            List<Match> markAsComplete = new List<Match>();
 
             //Check which matches are played
             foreach (Match match in matches)
@@ -157,7 +164,7 @@ namespace VliegendBat
                         if (match.players[0] != null)
                         {
                             matchWinners.Add(match.players[0]);
-                            match.matchState = MatchState.RoundFinished;
+                            markAsComplete.Add(match);
                         }
                         else matchesUnplayed.Add(match);
                         break;
@@ -165,7 +172,7 @@ namespace VliegendBat
                     //Finished matches get added to played matches
                     case MatchState.Finished:
                         matchWinners.Add(match.winner);
-                        match.matchState = MatchState.RoundFinished;
+                        markAsComplete.Add(match);
                         break;
 
                     //Matches whose round is finished are skipped
@@ -173,22 +180,35 @@ namespace VliegendBat
                 } 
             }
 
+            //Mark finished or skipped round as completed
+            foreach (Match match in matches) match.matchState = MatchState.RoundFinished;
+
+            //Check if the final match is played
+            if (matchWinners.Count == 1)
+            {
+                //Show a message to the user
+                System.Windows.Forms.MessageBox.Show(matchWinners[0].name + " heeft het toernooi gewonnen!", "Informatie");
+                //Set state to finished and return
+                state = TourneyState.Finished;
+                return;
+            }
+
             //Determine next round with the previous round's winners
             Random rng = new Random();
             Player[] nextRoundPlayers = matchWinners.OrderBy(x => rng.Next()).ToArray();
 
-            for (int i = 0, j = 0; i < matchesUnplayed.Count; i++, j += 2)
+            for (int i = 0, j = 0; j < nextRoundPlayers.Length; i++, j += 2)
             {
                 //If the match is to be skipped, add player to it
                 if (matchesUnplayed[i].matchState == MatchState.Skip)
                 {
-                    matchesUnplayed[i].players[0] = matchWinners[j];
+                    matchesUnplayed[i].players[0] = nextRoundPlayers[j];
                     j--; //revert j one back because only one winner is used
                 }
                 else
                 {
-                    matchesUnplayed[i].players[0] = matchWinners[j];
-                    matchesUnplayed[i].players[1] = matchWinners[j + 1];
+                    matchesUnplayed[i].players[0] = nextRoundPlayers[j];
+                    matchesUnplayed[i].players[1] = nextRoundPlayers[j + 1];
                     matchesUnplayed[i].matchState = MatchState.NotStarted;
                 }
             }

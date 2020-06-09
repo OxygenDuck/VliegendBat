@@ -24,19 +24,22 @@ namespace VliegendBat
 
             for (int i = 0; i < Program.Tourneys.Count; i++)
             {
-                SignupTourneyListing listing = new SignupTourneyListing(Program.Tourneys[i]);
-                pnlTourneyList.Controls.Add(listing);
-                listing.Location = new Point(0, 0 + (listing.Height * i));
-                listing.UpdateListing();
+                if (Program.Tourneys[i].state == TourneyState.NotStarted)
+                {
+                    SignupTourneyListing listing = new SignupTourneyListing(Program.Tourneys[i]);
+                    pnlTourneyList.Controls.Add(listing);
+                    listing.Location = new Point(0, 0 + (listing.Height * i));
+                    listing.UpdateListing();
 
-                listing.lblIndex.Text = i.ToString();
-                if (i % 2 == 0)
-                {
-                    listing.BackColor = Color.FromArgb(255, 255, 255);
-                }
-                else
-                {
-                    listing.BackColor = Color.FromArgb(200, 200, 200);
+                    listing.lblIndex.Text = i.ToString();
+                    if (i % 2 == 0)
+                    {
+                        listing.BackColor = Color.FromArgb(255, 255, 255);
+                    }
+                    else
+                    {
+                        listing.BackColor = Color.FromArgb(200, 200, 200);
+                    }
                 }
             }
         }

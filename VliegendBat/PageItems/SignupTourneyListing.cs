@@ -46,6 +46,7 @@ namespace VliegendBat
         {
             tourney.EnterPlayer(Program.CurrentPlayer);
             UpdateListing();
+            Program.SaveTourneys();
         }
     }
 }

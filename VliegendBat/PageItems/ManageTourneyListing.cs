@@ -33,8 +33,17 @@ namespace VliegendBat
             lblStatus.Text = tourney.state.ToString();
             lblTourneyName.Text = tourney.name;
             lblParticipants.Text = tourney.players.Count.ToString();
-            //TODO: Print the amount of matches to lblMatches
-        }
+
+            //Determine the amount of matches played
+            int matchesPlayed = 0;
+            foreach (Match match in tourney.matches)
+            {
+                if (match.matchState == MatchState.Finished || match.matchState == MatchState.RoundFinished || match.matchState == MatchState.Skip)
+                {
+                    matchesPlayed++;
+                }
+            }
+            lblMatchesPlayed.Text = matchesPlayed.ToString() + "/" + tourney.matches.Count.ToString();        }
 
         //Button click to manage the matches for this tourney
         private void btnManageMatches_Click(object sender, EventArgs e)

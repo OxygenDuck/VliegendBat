@@ -46,6 +46,7 @@ namespace VliegendBat
                 pnlMatchList.Controls.Add(listing);
                 
                 listing.lblIndex.Text = i.ToString();
+                listing.lblTourneyName.Text = tourney.name;
                 if (i % 2 == 0)
                 {
                     listing.BackColor = Color.FromArgb(255, 255, 255);
@@ -82,7 +83,5 @@ namespace VliegendBat
         {
             MainWindow.SetPage(Pages.ManageTourney);
         }
-
-        //TODO: Literally everything for matches
     }
 }

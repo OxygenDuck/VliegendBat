@@ -37,7 +37,7 @@ namespace VliegendBat
             }
             MainWindow.SetPage(Pages.Dashboard);
         }
-
+//TODO: Literally everything for player statistics
         /// <summary>
         /// Update the statistics shown on screen with current information about the player referenced
         /// </summary>
@@ -47,6 +47,6 @@ namespace VliegendBat
             //TODO: the other statistics
         }
 
-        //TODO: Literally everything for player statistics
+        
     }
 }
