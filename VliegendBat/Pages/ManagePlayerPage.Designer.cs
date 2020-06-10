@@ -35,7 +35,7 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(428, 252);
+            this.btnReturn.Location = new System.Drawing.Point(482, 483);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(204, 44);
             this.btnReturn.TabIndex = 5;
@@ -46,14 +46,15 @@
             // pnlPlayerList
             // 
             this.pnlPlayerList.AutoScroll = true;
+            this.pnlPlayerList.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pnlPlayerList.Location = new System.Drawing.Point(3, 3);
             this.pnlPlayerList.Name = "pnlPlayerList";
-            this.pnlPlayerList.Size = new System.Drawing.Size(829, 235);
+            this.pnlPlayerList.Size = new System.Drawing.Size(944, 474);
             this.pnlPlayerList.TabIndex = 4;
             // 
             // btnCreatePlayer
             // 
-            this.btnCreatePlayer.Location = new System.Drawing.Point(218, 252);
+            this.btnCreatePlayer.Location = new System.Drawing.Point(272, 483);
             this.btnCreatePlayer.Name = "btnCreatePlayer";
             this.btnCreatePlayer.Size = new System.Drawing.Size(204, 44);
             this.btnCreatePlayer.TabIndex = 6;
@@ -69,7 +70,7 @@
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pnlPlayerList);
             this.Name = "ManagePlayerPage";
-            this.Size = new System.Drawing.Size(835, 313);
+            this.Size = new System.Drawing.Size(950, 540);
             this.ResumeLayout(false);
 
         }

@@ -40,7 +40,7 @@
             // lblTourneyName
             // 
             this.lblTourneyName.AutoSize = true;
-            this.lblTourneyName.Location = new System.Drawing.Point(54, 37);
+            this.lblTourneyName.Location = new System.Drawing.Point(95, 27);
             this.lblTourneyName.Name = "lblTourneyName";
             this.lblTourneyName.Size = new System.Drawing.Size(89, 13);
             this.lblTourneyName.TabIndex = 0;
@@ -58,7 +58,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(170, 37);
+            this.label1.Location = new System.Drawing.Point(94, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 2;
@@ -67,7 +67,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(208, 37);
+            this.lblStatus.Location = new System.Drawing.Point(132, 47);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(49, 13);
             this.lblStatus.TabIndex = 3;
@@ -76,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(276, 37);
+            this.label2.Location = new System.Drawing.Point(639, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 4;
@@ -85,7 +85,7 @@
             // lblMatchesPlayed
             // 
             this.lblMatchesPlayed.AutoSize = true;
-            this.lblMatchesPlayed.Location = new System.Drawing.Point(396, 37);
+            this.lblMatchesPlayed.Location = new System.Drawing.Point(759, 37);
             this.lblMatchesPlayed.Name = "lblMatchesPlayed";
             this.lblMatchesPlayed.Size = new System.Drawing.Size(30, 13);
             this.lblMatchesPlayed.TabIndex = 5;
@@ -93,7 +93,7 @@
             // 
             // btnSignUp
             // 
-            this.btnSignUp.Location = new System.Drawing.Point(467, 18);
+            this.btnSignUp.Location = new System.Drawing.Point(801, 18);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(114, 51);
             this.btnSignUp.TabIndex = 6;
@@ -113,7 +113,7 @@
             this.Controls.Add(this.lblIndex);
             this.Controls.Add(this.lblTourneyName);
             this.Name = "SignupTourneyListing";
-            this.Size = new System.Drawing.Size(593, 89);
+            this.Size = new System.Drawing.Size(944, 89);
             this.ResumeLayout(false);
             this.PerformLayout();
 

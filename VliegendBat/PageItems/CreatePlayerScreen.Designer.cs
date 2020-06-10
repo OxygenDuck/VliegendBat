@@ -41,7 +41,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(321, 11);
+            this.label1.Location = new System.Drawing.Point(383, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 25);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(313, 62);
+            this.label2.Location = new System.Drawing.Point(309, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 1;
@@ -59,7 +59,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(313, 101);
+            this.label3.Location = new System.Drawing.Point(309, 237);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 2;
@@ -67,22 +67,22 @@
             // 
             // tbxUsername
             // 
-            this.tbxUsername.Location = new System.Drawing.Point(316, 78);
+            this.tbxUsername.Location = new System.Drawing.Point(399, 195);
             this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.Size = new System.Drawing.Size(166, 20);
+            this.tbxUsername.Size = new System.Drawing.Size(213, 20);
             this.tbxUsername.TabIndex = 3;
             // 
             // tbxPassword
             // 
-            this.tbxPassword.Location = new System.Drawing.Point(316, 117);
+            this.tbxPassword.Location = new System.Drawing.Point(399, 234);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.PasswordChar = '*';
-            this.tbxPassword.Size = new System.Drawing.Size(166, 20);
+            this.tbxPassword.Size = new System.Drawing.Size(213, 20);
             this.tbxPassword.TabIndex = 4;
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(221, 174);
+            this.btnCreate.Location = new System.Drawing.Point(284, 369);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(180, 46);
             this.btnCreate.TabIndex = 5;
@@ -92,7 +92,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(407, 174);
+            this.btnBack.Location = new System.Drawing.Point(470, 369);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(180, 46);
             this.btnBack.TabIndex = 6;
@@ -113,7 +113,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CreatePlayerScreen";
-            this.Size = new System.Drawing.Size(829, 235);
+            this.Size = new System.Drawing.Size(944, 474);
             this.ResumeLayout(false);
             this.PerformLayout();
 

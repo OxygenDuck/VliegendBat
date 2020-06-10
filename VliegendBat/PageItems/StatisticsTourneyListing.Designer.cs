@@ -47,7 +47,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(248, 20);
+            this.label2.Location = new System.Drawing.Point(394, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 1;
@@ -56,7 +56,7 @@
             // lblState
             // 
             this.lblState.AutoSize = true;
-            this.lblState.Location = new System.Drawing.Point(297, 20);
+            this.lblState.Location = new System.Drawing.Point(443, 20);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(42, 13);
             this.lblState.TabIndex = 2;
@@ -90,7 +90,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTourneyName);
             this.Name = "StatisticsTourneyListing";
-            this.Size = new System.Drawing.Size(477, 83);
+            this.Size = new System.Drawing.Size(505, 83);
             this.ResumeLayout(false);
             this.PerformLayout();
 

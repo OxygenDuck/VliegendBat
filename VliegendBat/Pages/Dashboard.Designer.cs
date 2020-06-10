@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.grbAdmin = new System.Windows.Forms.GroupBox();
-            this.grbPlayer = new System.Windows.Forms.GroupBox();
-            this.btnCreateTourney = new System.Windows.Forms.Button();
-            this.btnManageTourney = new System.Windows.Forms.Button();
             this.btnManagePlayers = new System.Windows.Forms.Button();
-            this.btnTourneySignup = new System.Windows.Forms.Button();
+            this.btnManageTourney = new System.Windows.Forms.Button();
+            this.btnCreateTourney = new System.Windows.Forms.Button();
+            this.grbPlayer = new System.Windows.Forms.GroupBox();
             this.btnShowStatistics = new System.Windows.Forms.Button();
+            this.btnTourneySignup = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.grbAdmin.SuspendLayout();
             this.grbPlayer.SuspendLayout();
@@ -45,43 +45,12 @@
             this.grbAdmin.Controls.Add(this.btnManagePlayers);
             this.grbAdmin.Controls.Add(this.btnManageTourney);
             this.grbAdmin.Controls.Add(this.btnCreateTourney);
-            this.grbAdmin.Location = new System.Drawing.Point(15, 15);
+            this.grbAdmin.Location = new System.Drawing.Point(247, 160);
             this.grbAdmin.Name = "grbAdmin";
             this.grbAdmin.Size = new System.Drawing.Size(200, 151);
             this.grbAdmin.TabIndex = 0;
             this.grbAdmin.TabStop = false;
             this.grbAdmin.Text = "Administrator";
-            // 
-            // grbPlayer
-            // 
-            this.grbPlayer.Controls.Add(this.btnShowStatistics);
-            this.grbPlayer.Controls.Add(this.btnTourneySignup);
-            this.grbPlayer.Location = new System.Drawing.Point(221, 15);
-            this.grbPlayer.Name = "grbPlayer";
-            this.grbPlayer.Size = new System.Drawing.Size(200, 151);
-            this.grbPlayer.TabIndex = 1;
-            this.grbPlayer.TabStop = false;
-            this.grbPlayer.Text = "Speler";
-            // 
-            // btnCreateTourney
-            // 
-            this.btnCreateTourney.Location = new System.Drawing.Point(6, 19);
-            this.btnCreateTourney.Name = "btnCreateTourney";
-            this.btnCreateTourney.Size = new System.Drawing.Size(188, 36);
-            this.btnCreateTourney.TabIndex = 0;
-            this.btnCreateTourney.Text = "Creëer Toernooi";
-            this.btnCreateTourney.UseVisualStyleBackColor = true;
-            this.btnCreateTourney.Click += new System.EventHandler(this.btnCreateTourney_Click);
-            // 
-            // btnManageTourney
-            // 
-            this.btnManageTourney.Location = new System.Drawing.Point(6, 61);
-            this.btnManageTourney.Name = "btnManageTourney";
-            this.btnManageTourney.Size = new System.Drawing.Size(188, 36);
-            this.btnManageTourney.TabIndex = 1;
-            this.btnManageTourney.Text = "Beheer Toernooien";
-            this.btnManageTourney.UseVisualStyleBackColor = true;
-            this.btnManageTourney.Click += new System.EventHandler(this.btnManageTourney_Click);
             // 
             // btnManagePlayers
             // 
@@ -93,15 +62,36 @@
             this.btnManagePlayers.UseVisualStyleBackColor = true;
             this.btnManagePlayers.Click += new System.EventHandler(this.btnManagePlayers_Click);
             // 
-            // btnTourneySignup
+            // btnManageTourney
             // 
-            this.btnTourneySignup.Location = new System.Drawing.Point(6, 19);
-            this.btnTourneySignup.Name = "btnTourneySignup";
-            this.btnTourneySignup.Size = new System.Drawing.Size(188, 36);
-            this.btnTourneySignup.TabIndex = 3;
-            this.btnTourneySignup.Text = "Meedoen aan Toernooi";
-            this.btnTourneySignup.UseVisualStyleBackColor = true;
-            this.btnTourneySignup.Click += new System.EventHandler(this.btnTourneySignup_Click);
+            this.btnManageTourney.Location = new System.Drawing.Point(6, 61);
+            this.btnManageTourney.Name = "btnManageTourney";
+            this.btnManageTourney.Size = new System.Drawing.Size(188, 36);
+            this.btnManageTourney.TabIndex = 1;
+            this.btnManageTourney.Text = "Beheer Toernooien";
+            this.btnManageTourney.UseVisualStyleBackColor = true;
+            this.btnManageTourney.Click += new System.EventHandler(this.btnManageTourney_Click);
+            // 
+            // btnCreateTourney
+            // 
+            this.btnCreateTourney.Location = new System.Drawing.Point(6, 19);
+            this.btnCreateTourney.Name = "btnCreateTourney";
+            this.btnCreateTourney.Size = new System.Drawing.Size(188, 36);
+            this.btnCreateTourney.TabIndex = 0;
+            this.btnCreateTourney.Text = "Creëer Toernooi";
+            this.btnCreateTourney.UseVisualStyleBackColor = true;
+            this.btnCreateTourney.Click += new System.EventHandler(this.btnCreateTourney_Click);
+            // 
+            // grbPlayer
+            // 
+            this.grbPlayer.Controls.Add(this.btnShowStatistics);
+            this.grbPlayer.Controls.Add(this.btnTourneySignup);
+            this.grbPlayer.Location = new System.Drawing.Point(453, 160);
+            this.grbPlayer.Name = "grbPlayer";
+            this.grbPlayer.Size = new System.Drawing.Size(200, 151);
+            this.grbPlayer.TabIndex = 1;
+            this.grbPlayer.TabStop = false;
+            this.grbPlayer.Text = "Speler";
             // 
             // btnShowStatistics
             // 
@@ -113,9 +103,19 @@
             this.btnShowStatistics.UseVisualStyleBackColor = true;
             this.btnShowStatistics.Click += new System.EventHandler(this.btnShowStatistics_Click);
             // 
+            // btnTourneySignup
+            // 
+            this.btnTourneySignup.Location = new System.Drawing.Point(6, 19);
+            this.btnTourneySignup.Name = "btnTourneySignup";
+            this.btnTourneySignup.Size = new System.Drawing.Size(188, 36);
+            this.btnTourneySignup.TabIndex = 3;
+            this.btnTourneySignup.Text = "Meedoen aan Toernooi";
+            this.btnTourneySignup.UseVisualStyleBackColor = true;
+            this.btnTourneySignup.Click += new System.EventHandler(this.btnTourneySignup_Click);
+            // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(15, 172);
+            this.btnLogout.Location = new System.Drawing.Point(247, 317);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(406, 36);
             this.btnLogout.TabIndex = 3;
@@ -131,7 +131,7 @@
             this.Controls.Add(this.grbPlayer);
             this.Controls.Add(this.grbAdmin);
             this.Name = "Dashboard";
-            this.Size = new System.Drawing.Size(438, 230);
+            this.Size = new System.Drawing.Size(950, 540);
             this.grbAdmin.ResumeLayout(false);
             this.grbPlayer.ResumeLayout(false);
             this.ResumeLayout(false);

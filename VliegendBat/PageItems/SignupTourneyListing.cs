@@ -34,10 +34,7 @@ namespace VliegendBat
         {
             lblTourneyName.Text = tourney.name;
             lblStatus.Text = tourney.state.ToString();
-            if (tourney.state == TourneyState.NotStarted)
-            {
-                lblMatchesPlayed.Text = "0/-";
-            }
+            lblMatchesPlayed.Text = "0/" + tourney.matches.Count.ToString();
             if (tourney.players.Contains(Program.CurrentPlayer))
             {
                 btnSignUp.Enabled = false;

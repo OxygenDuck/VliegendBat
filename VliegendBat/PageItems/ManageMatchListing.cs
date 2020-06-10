@@ -234,21 +234,21 @@ namespace VliegendBat
             if (dialogResult == DialogResult.Yes)
             {
                 //Depending on who got disqualified, set the score
-                if (playerToDisqualify == match.players[0])
+                if (sender == btnDisqualifyPlayer1)
                 {
                     //Set the winning player's score -> first 3 games won
                     rbtGame1P2.Checked = true;
                     rbtGame2P2.Checked = true;
                     rbtGame3P2.Checked = true;
-                    rbtGame2P2.Checked = false;
-                    rbtGame3P2.Checked = false;
+                    rbtGame4P2.Checked = false;
+                    rbtGame5P2.Checked = false;
 
                     //Set the disqualified player's score to 0
-                    rbtGame1P1.Checked = false;
-                    rbtGame2P1.Checked = false;
-                    rbtGame3P1.Checked = false;
-                    rbtGame4P1.Checked = false;
-                    rbtGame5P1.Checked = false;
+                    //rbtGame1P1.Checked = false;
+                    //rbtGame2P1.Checked = false;
+                    //rbtGame3P1.Checked = false;
+                    //rbtGame4P1.Checked = false;
+                    //rbtGame5P1.Checked = false;
                 }
                 else
                 {
@@ -260,15 +260,14 @@ namespace VliegendBat
                     rbtGame5P1.Checked = false;
 
                     //Set the disqualified player's score to 0
-                    rbtGame1P2.Checked = false;
-                    rbtGame2P2.Checked = false;
-                    rbtGame3P2.Checked = false;
-                    rbtGame4P2.Checked = false;
-                    rbtGame5P2.Checked = false;
+                    //rbtGame1P2.Checked = false;
+                    //rbtGame2P2.Checked = false;
+                    //rbtGame3P2.Checked = false;
+                    //rbtGame4P2.Checked = false;
+                    //rbtGame5P2.Checked = false;
                 }
 
                 //Have the match be decided and saved
-                //TODO: Refactor this
                 btnFinish_Click(null, null);
             }
         }

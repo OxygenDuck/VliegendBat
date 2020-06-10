@@ -29,33 +29,25 @@
         private void InitializeComponent()
         {
             this.tbxName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSaveTourney = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(120, 107);
+            this.tbxName.Location = new System.Drawing.Point(119, 60);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(100, 20);
+            this.tbxName.Size = new System.Drawing.Size(189, 20);
             this.tbxName.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ceëer Toernooi";
             // 
             // btnSaveTourney
             // 
-            this.btnSaveTourney.Location = new System.Drawing.Point(89, 158);
+            this.btnSaveTourney.Location = new System.Drawing.Point(281, 422);
             this.btnSaveTourney.Name = "btnSaveTourney";
-            this.btnSaveTourney.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveTourney.Size = new System.Drawing.Size(179, 51);
             this.btnSaveTourney.TabIndex = 2;
             this.btnSaveTourney.Text = "Creëer";
             this.btnSaveTourney.UseVisualStyleBackColor = true;
@@ -64,44 +56,55 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 110);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(65, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Naam:";
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(170, 158);
+            this.btnReturn.Location = new System.Drawing.Point(466, 422);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(75, 23);
+            this.btnReturn.Size = new System.Drawing.Size(179, 51);
             this.btnReturn.TabIndex = 4;
             this.btnReturn.Text = "Terug";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // CreateTourneyScreen
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tbxName);
+            this.groupBox1.Location = new System.Drawing.Point(281, 162);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(364, 128);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Creëer Toernooi";
+            // 
+            // CreateTourneyPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSaveTourney);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbxName);
-            this.Name = "CreateTourneyScreen";
-            this.Size = new System.Drawing.Size(339, 210);
+            this.Name = "CreateTourneyPage";
+            this.Size = new System.Drawing.Size(950, 540);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.TextBox tbxName;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSaveTourney;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

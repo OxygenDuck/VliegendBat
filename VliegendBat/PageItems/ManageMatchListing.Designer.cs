@@ -38,6 +38,9 @@
             this.lblIndex = new System.Windows.Forms.Label();
             this.lblTourneyName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnFinish = new System.Windows.Forms.Button();
+            this.btnDisqualifyPlayer2 = new System.Windows.Forms.Button();
+            this.btnDisqualifyPlayer1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.rbtGame5P2 = new System.Windows.Forms.RadioButton();
@@ -56,9 +59,6 @@
             this.rbtGame1P1 = new System.Windows.Forms.RadioButton();
             this.lblPlayerName2 = new System.Windows.Forms.Label();
             this.lblPlayerName1 = new System.Windows.Forms.Label();
-            this.btnDisqualifyPlayer1 = new System.Windows.Forms.Button();
-            this.btnDisqualifyPlayer2 = new System.Windows.Forms.Button();
-            this.btnFinish = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -71,7 +71,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(409, 32);
+            this.lblStatus.Location = new System.Drawing.Point(668, 27);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(47, 13);
             this.lblStatus.TabIndex = 25;
@@ -80,7 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(370, 32);
+            this.label4.Location = new System.Drawing.Point(629, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 24;
@@ -88,7 +88,7 @@
             // 
             // btnExpand
             // 
-            this.btnExpand.Location = new System.Drawing.Point(638, 13);
+            this.btnExpand.Location = new System.Drawing.Point(816, 13);
             this.btnExpand.Name = "btnExpand";
             this.btnExpand.Size = new System.Drawing.Size(115, 51);
             this.btnExpand.TabIndex = 23;
@@ -99,7 +99,7 @@
             // lblWinner
             // 
             this.lblWinner.AutoSize = true;
-            this.lblWinner.Location = new System.Drawing.Point(528, 32);
+            this.lblWinner.Location = new System.Drawing.Point(685, 40);
             this.lblWinner.Name = "lblWinner";
             this.lblWinner.Size = new System.Drawing.Size(82, 13);
             this.lblWinner.TabIndex = 22;
@@ -108,7 +108,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(472, 32);
+            this.label2.Location = new System.Drawing.Point(629, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 21;
@@ -117,7 +117,7 @@
             // lblPlayers
             // 
             this.lblPlayers.AutoSize = true;
-            this.lblPlayers.Location = new System.Drawing.Point(208, 32);
+            this.lblPlayers.Location = new System.Drawing.Point(255, 32);
             this.lblPlayers.Name = "lblPlayers";
             this.lblPlayers.Size = new System.Drawing.Size(149, 13);
             this.lblPlayers.TabIndex = 20;
@@ -126,7 +126,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(164, 32);
+            this.label1.Location = new System.Drawing.Point(211, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 19;
@@ -161,8 +161,38 @@
             this.panel1.Controls.Add(this.lblPlayerName1);
             this.panel1.Location = new System.Drawing.Point(0, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(766, 75);
+            this.panel1.Size = new System.Drawing.Size(944, 75);
             this.panel1.TabIndex = 26;
+            // 
+            // btnFinish
+            // 
+            this.btnFinish.Location = new System.Drawing.Point(816, 12);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(115, 51);
+            this.btnFinish.TabIndex = 27;
+            this.btnFinish.Text = "Afronden en Opslaan";
+            this.btnFinish.UseVisualStyleBackColor = true;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
+            // btnDisqualifyPlayer2
+            // 
+            this.btnDisqualifyPlayer2.Location = new System.Drawing.Point(289, 42);
+            this.btnDisqualifyPlayer2.Name = "btnDisqualifyPlayer2";
+            this.btnDisqualifyPlayer2.Size = new System.Drawing.Size(115, 22);
+            this.btnDisqualifyPlayer2.TabIndex = 30;
+            this.btnDisqualifyPlayer2.Text = "Diskwalificeren";
+            this.btnDisqualifyPlayer2.UseVisualStyleBackColor = true;
+            this.btnDisqualifyPlayer2.Click += new System.EventHandler(this.btnDisqualifyPlayer1_Click);
+            // 
+            // btnDisqualifyPlayer1
+            // 
+            this.btnDisqualifyPlayer1.Location = new System.Drawing.Point(289, 22);
+            this.btnDisqualifyPlayer1.Name = "btnDisqualifyPlayer1";
+            this.btnDisqualifyPlayer1.Size = new System.Drawing.Size(115, 22);
+            this.btnDisqualifyPlayer1.TabIndex = 27;
+            this.btnDisqualifyPlayer1.Text = "Diskwalificeren";
+            this.btnDisqualifyPlayer1.UseVisualStyleBackColor = true;
+            this.btnDisqualifyPlayer1.Click += new System.EventHandler(this.btnDisqualifyPlayer1_Click);
             // 
             // groupBox1
             // 
@@ -357,36 +387,6 @@
             this.lblPlayerName1.TabIndex = 27;
             this.lblPlayerName1.Text = "--Spelernaam1--";
             // 
-            // btnDisqualifyPlayer1
-            // 
-            this.btnDisqualifyPlayer1.Location = new System.Drawing.Point(289, 22);
-            this.btnDisqualifyPlayer1.Name = "btnDisqualifyPlayer1";
-            this.btnDisqualifyPlayer1.Size = new System.Drawing.Size(115, 22);
-            this.btnDisqualifyPlayer1.TabIndex = 27;
-            this.btnDisqualifyPlayer1.Text = "Diskwalificeren";
-            this.btnDisqualifyPlayer1.UseVisualStyleBackColor = true;
-            this.btnDisqualifyPlayer1.Click += new System.EventHandler(this.btnDisqualifyPlayer1_Click);
-            // 
-            // btnDisqualifyPlayer2
-            // 
-            this.btnDisqualifyPlayer2.Location = new System.Drawing.Point(289, 42);
-            this.btnDisqualifyPlayer2.Name = "btnDisqualifyPlayer2";
-            this.btnDisqualifyPlayer2.Size = new System.Drawing.Size(115, 22);
-            this.btnDisqualifyPlayer2.TabIndex = 30;
-            this.btnDisqualifyPlayer2.Text = "Diskwalificeren";
-            this.btnDisqualifyPlayer2.UseVisualStyleBackColor = true;
-            this.btnDisqualifyPlayer2.Click += new System.EventHandler(this.btnDisqualifyPlayer1_Click);
-            // 
-            // btnFinish
-            // 
-            this.btnFinish.Location = new System.Drawing.Point(638, 12);
-            this.btnFinish.Name = "btnFinish";
-            this.btnFinish.Size = new System.Drawing.Size(115, 51);
-            this.btnFinish.TabIndex = 27;
-            this.btnFinish.Text = "Afronden en Opslaan";
-            this.btnFinish.UseVisualStyleBackColor = true;
-            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
-            // 
             // ManageMatchListing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,7 +402,7 @@
             this.Controls.Add(this.lblIndex);
             this.Controls.Add(this.lblTourneyName);
             this.Name = "ManageMatchListing";
-            this.Size = new System.Drawing.Size(766, 150);
+            this.Size = new System.Drawing.Size(944, 150);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

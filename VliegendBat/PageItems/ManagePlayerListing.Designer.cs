@@ -39,7 +39,7 @@
             // 
             // btnSaveChanges
             // 
-            this.btnSaveChanges.Location = new System.Drawing.Point(558, 15);
+            this.btnSaveChanges.Location = new System.Drawing.Point(763, 15);
             this.btnSaveChanges.Name = "btnSaveChanges";
             this.btnSaveChanges.Size = new System.Drawing.Size(83, 46);
             this.btnSaveChanges.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // btnRemoveUser
             // 
-            this.btnRemoveUser.Location = new System.Drawing.Point(647, 15);
+            this.btnRemoveUser.Location = new System.Drawing.Point(852, 15);
             this.btnRemoveUser.Name = "btnRemoveUser";
             this.btnRemoveUser.Size = new System.Drawing.Size(83, 46);
             this.btnRemoveUser.TabIndex = 1;
@@ -69,15 +69,16 @@
             // lblPlayerName
             // 
             this.lblPlayerName.AutoSize = true;
-            this.lblPlayerName.Location = new System.Drawing.Point(66, 32);
+            this.lblPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerName.Location = new System.Drawing.Point(65, 30);
             this.lblPlayerName.Name = "lblPlayerName";
-            this.lblPlayerName.Size = new System.Drawing.Size(80, 13);
+            this.lblPlayerName.Size = new System.Drawing.Size(104, 16);
             this.lblPlayerName.TabIndex = 3;
             this.lblPlayerName.Text = "--Speler Naam--";
             // 
             // btnShowStatistics
             // 
-            this.btnShowStatistics.Location = new System.Drawing.Point(469, 15);
+            this.btnShowStatistics.Location = new System.Drawing.Point(674, 15);
             this.btnShowStatistics.Name = "btnShowStatistics";
             this.btnShowStatistics.Size = new System.Drawing.Size(83, 46);
             this.btnShowStatistics.TabIndex = 4;
@@ -88,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(278, 32);
+            this.label1.Location = new System.Drawing.Point(483, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 5;
@@ -100,7 +101,7 @@
             this.cbxRights.Items.AddRange(new object[] {
             "Gebruiker",
             "Administrator"});
-            this.cbxRights.Location = new System.Drawing.Point(335, 28);
+            this.cbxRights.Location = new System.Drawing.Point(540, 28);
             this.cbxRights.Name = "cbxRights";
             this.cbxRights.Size = new System.Drawing.Size(128, 21);
             this.cbxRights.TabIndex = 6;
@@ -117,7 +118,7 @@
             this.Controls.Add(this.btnRemoveUser);
             this.Controls.Add(this.btnSaveChanges);
             this.Name = "ManagePlayerListing";
-            this.Size = new System.Drawing.Size(733, 77);
+            this.Size = new System.Drawing.Size(944, 77);
             this.ResumeLayout(false);
             this.PerformLayout();
 

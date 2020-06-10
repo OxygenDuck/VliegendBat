@@ -10,8 +10,8 @@ namespace VliegendBat
 {
     /// <summary>
     /// Program created by Peter Janssen, IC17ao.e
-    /// Last update 9th of June 2020
-    /// Version 0.1.6
+    /// Last update 10th of June 2020
+    /// Version 0.2.0
     /// </summary>
     static class Program
     {
@@ -45,27 +45,44 @@ namespace VliegendBat
         public static void SavePlayers()
         {
             //Failsafe to make sure the program is never left without an admin
+            //Check if there is no player with administrator rights
             bool createNewAdmin = true;
+            Player existingAdmin = null;
             foreach (Player player in Players)
             {
                 if (player.isAdmin)
                 {
                     createNewAdmin = false;
-                    break;
+                }
+                //search for a user named 'admin'
+                if (player.name == "admin")
+                {
+                    existingAdmin = player;
                 }
             }
+
+            //If there is no-one with adminrights, make the account
             if (createNewAdmin)
             {
-                //Create new admin: both username and password are "admin"
-                string password = StringCipher.Encrypt("admin", "admin");
-                Player admin = new Player("admin", password)
+                //If the account already exists, give it the rights
+                if (existingAdmin != null)
                 {
-                    isAdmin = true
-                };
-                Players.Add(admin);
+                    existingAdmin.isAdmin = true;
+                    MessageBox.Show("De laatste administrator is verwijderd, het bestaande account (gebruikersnaam: 'admin', wachtwoord: 'admin') heeft zijn rechten teruggekregen", "Informatie");
+                }
+                else //Else create the new account
+                {
+                    //Create new admin: both username and password are "admin"
+                    string password = StringCipher.Encrypt("admin", "admin");
+                    Player admin = new Player("admin", password)
+                    {
+                        isAdmin = true
+                    };
+                    Players.Add(admin);
 
-                //Show message to user about the new admin account
-                MessageBox.Show("De laatste administrator is verwijderd, er is een nieuw administrator account gemaakt onder de gebruikersnaam: 'admin', wachtwoord: 'admin'", "Informatie");
+                    //Show message to user about the new admin account
+                    MessageBox.Show("De laatste administrator is verwijderd, er is een nieuw administrator account gemaakt onder de gebruikersnaam: 'admin', wachtwoord: 'admin'", "Informatie");
+                }
             }
 
             //Save all the players
@@ -76,7 +93,7 @@ namespace VliegendBat
         }
 
         /// <summary>
-        /// Loads all players fro local storage
+        /// Loads all players from local storage
         /// </summary>
         public static void LoadPlayers()
         {

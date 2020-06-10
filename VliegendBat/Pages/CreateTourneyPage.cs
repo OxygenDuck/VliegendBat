@@ -33,6 +33,13 @@ namespace VliegendBat
                 }
             }
 
+            //Check if the name is empty
+            if (tbxName.Text == "")
+            {
+                MessageBox.Show("De naam mag niet leeg zijn, vul een naam in", "Waarschuwing");
+                return;
+            }
+
             //Save Tourney to storage
             Program.Tourneys.Add(new Tourney(tbxName.Text));
             Program.SaveTourneys();

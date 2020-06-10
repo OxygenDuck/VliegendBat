@@ -51,7 +51,7 @@
             // 
             this.lblPlayerName.AutoSize = true;
             this.lblPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerName.Location = new System.Drawing.Point(314, 10);
+            this.lblPlayerName.Location = new System.Drawing.Point(398, 10);
             this.lblPlayerName.Name = "lblPlayerName";
             this.lblPlayerName.Size = new System.Drawing.Size(133, 20);
             this.lblPlayerName.TabIndex = 0;
@@ -60,7 +60,7 @@
             // lblMatchesPlayed
             // 
             this.lblMatchesPlayed.AutoSize = true;
-            this.lblMatchesPlayed.Location = new System.Drawing.Point(128, 33);
+            this.lblMatchesPlayed.Location = new System.Drawing.Point(139, 33);
             this.lblMatchesPlayed.Name = "lblMatchesPlayed";
             this.lblMatchesPlayed.Size = new System.Drawing.Size(92, 13);
             this.lblMatchesPlayed.TabIndex = 1;
@@ -69,16 +69,17 @@
             // pnlTourneyListing
             // 
             this.pnlTourneyListing.AutoScroll = true;
-            this.pnlTourneyListing.Location = new System.Drawing.Point(261, 33);
+            this.pnlTourneyListing.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlTourneyListing.Location = new System.Drawing.Point(442, 33);
             this.pnlTourneyListing.Name = "pnlTourneyListing";
-            this.pnlTourneyListing.Size = new System.Drawing.Size(505, 238);
+            this.pnlTourneyListing.Size = new System.Drawing.Size(505, 504);
             this.pnlTourneyListing.TabIndex = 2;
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(19, 227);
+            this.btnReturn.Location = new System.Drawing.Point(73, 477);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(199, 44);
+            this.btnReturn.Size = new System.Drawing.Size(270, 41);
             this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Terug";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -87,7 +88,7 @@
             // lblMatchesWon
             // 
             this.lblMatchesWon.AutoSize = true;
-            this.lblMatchesWon.Location = new System.Drawing.Point(128, 46);
+            this.lblMatchesWon.Location = new System.Drawing.Point(139, 46);
             this.lblMatchesWon.Name = "lblMatchesWon";
             this.lblMatchesWon.Size = new System.Drawing.Size(83, 13);
             this.lblMatchesWon.TabIndex = 4;
@@ -96,7 +97,7 @@
             // lblMatchesLost
             // 
             this.lblMatchesLost.AutoSize = true;
-            this.lblMatchesLost.Location = new System.Drawing.Point(128, 59);
+            this.lblMatchesLost.Location = new System.Drawing.Point(139, 59);
             this.lblMatchesLost.Name = "lblMatchesLost";
             this.lblMatchesLost.Size = new System.Drawing.Size(80, 13);
             this.lblMatchesLost.TabIndex = 5;
@@ -105,7 +106,7 @@
             // lblGamesLost
             // 
             this.lblGamesLost.AutoSize = true;
-            this.lblGamesLost.Location = new System.Drawing.Point(128, 98);
+            this.lblGamesLost.Location = new System.Drawing.Point(139, 98);
             this.lblGamesLost.Name = "lblGamesLost";
             this.lblGamesLost.Size = new System.Drawing.Size(72, 13);
             this.lblGamesLost.TabIndex = 8;
@@ -114,7 +115,7 @@
             // lblGamesWon
             // 
             this.lblGamesWon.AutoSize = true;
-            this.lblGamesWon.Location = new System.Drawing.Point(128, 85);
+            this.lblGamesWon.Location = new System.Drawing.Point(139, 85);
             this.lblGamesWon.Name = "lblGamesWon";
             this.lblGamesWon.Size = new System.Drawing.Size(75, 13);
             this.lblGamesWon.TabIndex = 7;
@@ -123,7 +124,7 @@
             // lblGamesPlayed
             // 
             this.lblGamesPlayed.AutoSize = true;
-            this.lblGamesPlayed.Location = new System.Drawing.Point(128, 72);
+            this.lblGamesPlayed.Location = new System.Drawing.Point(139, 72);
             this.lblGamesPlayed.Name = "lblGamesPlayed";
             this.lblGamesPlayed.Size = new System.Drawing.Size(84, 13);
             this.lblGamesPlayed.TabIndex = 6;
@@ -133,7 +134,7 @@
             // 
             this.lblRank.AutoSize = true;
             this.lblRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRank.Location = new System.Drawing.Point(70, 149);
+            this.lblRank.Location = new System.Drawing.Point(81, 149);
             this.lblRank.Name = "lblRank";
             this.lblRank.Size = new System.Drawing.Size(65, 16);
             this.lblRank.TabIndex = 9;
@@ -143,7 +144,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 149);
+            this.label1.Location = new System.Drawing.Point(27, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 10;
@@ -152,7 +153,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 98);
+            this.label2.Location = new System.Drawing.Point(27, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 16;
@@ -161,7 +162,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 85);
+            this.label3.Location = new System.Drawing.Point(27, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 13);
             this.label3.TabIndex = 15;
@@ -170,7 +171,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 72);
+            this.label4.Location = new System.Drawing.Point(27, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 13);
             this.label4.TabIndex = 14;
@@ -179,7 +180,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 59);
+            this.label5.Location = new System.Drawing.Point(27, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 13);
             this.label5.TabIndex = 13;
@@ -188,7 +189,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 46);
+            this.label6.Location = new System.Drawing.Point(27, 46);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 13);
             this.label6.TabIndex = 12;
@@ -197,7 +198,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 33);
+            this.label7.Location = new System.Drawing.Point(27, 33);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 13);
             this.label7.TabIndex = 11;
@@ -225,7 +226,7 @@
             this.Controls.Add(this.lblMatchesPlayed);
             this.Controls.Add(this.lblPlayerName);
             this.Name = "PlayerStatisticsPage";
-            this.Size = new System.Drawing.Size(778, 292);
+            this.Size = new System.Drawing.Size(950, 540);
             this.ResumeLayout(false);
             this.PerformLayout();
 

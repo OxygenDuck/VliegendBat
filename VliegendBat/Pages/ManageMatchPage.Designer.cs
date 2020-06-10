@@ -34,7 +34,7 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(353, 244);
+            this.btnReturn.Location = new System.Drawing.Point(379, 493);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(204, 44);
             this.btnReturn.TabIndex = 5;
@@ -45,19 +45,20 @@
             // pnlMatchList
             // 
             this.pnlMatchList.AutoScroll = true;
+            this.pnlMatchList.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pnlMatchList.Location = new System.Drawing.Point(3, 3);
             this.pnlMatchList.Name = "pnlMatchList";
-            this.pnlMatchList.Size = new System.Drawing.Size(898, 235);
+            this.pnlMatchList.Size = new System.Drawing.Size(944, 461);
             this.pnlMatchList.TabIndex = 4;
             // 
-            // ManageMatchScreen
+            // ManageMatchPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.pnlMatchList);
-            this.Name = "ManageMatchScreen";
-            this.Size = new System.Drawing.Size(904, 306);
+            this.Name = "ManageMatchPage";
+            this.Size = new System.Drawing.Size(950, 540);
             this.ResumeLayout(false);
 
         }

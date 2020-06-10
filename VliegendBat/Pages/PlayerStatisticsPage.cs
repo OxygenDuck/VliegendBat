@@ -10,76 +10,12 @@ using System.Windows.Forms;
 
 namespace VliegendBat
 {
-    public class PlayerStatistics
-    {
-        //The player associated with the object
-        public Player player = null;
-
-        //The individual statistics
-        public int matchesWon = 0;
-        public int matchesLost = 0;
-        public int gamesWon = 0;
-        public int gamesLost = 0;
-
-        public int rankScore = 0;
-
-        /// <summary>
-        /// Create a new player statistics object
-        /// </summary>
-        /// <param name="player">The player associated with the statistics</param>
-        public PlayerStatistics(Player player)
-        {
-            this.player = player;
-            CalculateStatistics();
-        }
-
-        /// <summary>
-        /// Calculate the statistics
-        /// </summary>
-        private void CalculateStatistics()
-        {
-            //search for each match this player is in
-            foreach (Tourney tourney in Program.Tourneys)
-            {
-                if (tourney.players.Contains(player))
-                {
-                    foreach (Match match in tourney.matches)
-                    {
-                        if (match.players.Contains(player))
-                        {
-                            //Look if player won or lost a match statistics
-                            if (match.winner == player) matchesWon++;
-                            else if (match.winner != null) matchesLost++;
-
-                            for (int i = 0; i < match.gamesPlayer1.Length; i++)
-                            {
-                                if (match.gamesPlayer1[i] && !match.gamesPlayer2[i]) //Match won by player 1
-                                {
-                                    if (match.players[0] == player) gamesWon++;
-                                    else gamesLost++;
-                                }
-                                else if (!match.gamesPlayer1[i] && match.gamesPlayer2[i]) //Match won by player 2
-                                {
-                                    if (match.players[1] == player) gamesWon++;
-                                    else gamesLost++;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            //calculate rankscore
-            rankScore = matchesWon;
-            rankScore *= 3; //Match score weighs heavier than game score
-            rankScore -= gamesLost;
-        }
-    }
 
     public partial class PlayerStatisticsPage : UserControl
     {
         //Player object to reference
         private Player player = null;
-        
+
         /// <summary>
         /// Create a new UserStatistics page
         /// </summary>
@@ -103,7 +39,7 @@ namespace VliegendBat
             }
             MainWindow.SetPage(Pages.Dashboard);
         }
-        
+
         /// <summary>
         /// Update the statistics shown on screen with current information about the player referenced
         /// </summary>
@@ -191,4 +127,70 @@ namespace VliegendBat
             }
         }
     }
+
+    public class PlayerStatistics
+    {
+        //The player associated with the object
+        public Player player = null;
+
+        //The individual statistics
+        public int matchesWon = 0;
+        public int matchesLost = 0;
+        public int gamesWon = 0;
+        public int gamesLost = 0;
+
+        public int rankScore = 0;
+
+        /// <summary>
+        /// Create a new player statistics object
+        /// </summary>
+        /// <param name="player">The player associated with the statistics</param>
+        public PlayerStatistics(Player player)
+        {
+            this.player = player;
+            CalculateStatistics();
+        }
+
+        /// <summary>
+        /// Calculate the statistics
+        /// </summary>
+        private void CalculateStatistics()
+        {
+            //search for each match this player is in
+            foreach (Tourney tourney in Program.Tourneys)
+            {
+                if (tourney.players.Contains(player))
+                {
+                    foreach (Match match in tourney.matches)
+                    {
+                        if (match.players.Contains(player))
+                        {
+                            //Look if player won or lost a match statistics
+                            if (match.winner == player) matchesWon++;
+                            else if (match.winner != null) matchesLost++;
+
+                            for (int i = 0; i < match.gamesPlayer1.Length; i++)
+                            {
+                                if (match.gamesPlayer1[i] && !match.gamesPlayer2[i]) //Match won by player 1
+                                {
+                                    if (match.players[0] == player) gamesWon++;
+                                    else gamesLost++;
+                                }
+                                else if (!match.gamesPlayer1[i] && match.gamesPlayer2[i]) //Match won by player 2
+                                {
+                                    if (match.players[1] == player) gamesWon++;
+                                    else gamesLost++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //calculate rankscore
+            rankScore = matchesWon;
+            rankScore *= 3; //Match score weighs heavier than game score
+            rankScore -= gamesLost;
+        }
+    }
+
 }

@@ -35,14 +35,14 @@
             // 
             this.pnlContent.Location = new System.Drawing.Point(12, 9);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(952, 325);
+            this.pnlContent.Size = new System.Drawing.Size(950, 540);
             this.pnlContent.TabIndex = 0;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 346);
+            this.ClientSize = new System.Drawing.Size(970, 559);
             this.Controls.Add(this.pnlContent);
             this.Name = "MainWindow";
             this.Text = "Vliegend Bat";

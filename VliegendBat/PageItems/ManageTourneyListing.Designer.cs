@@ -42,7 +42,7 @@
             // 
             // btnManageMatches
             // 
-            this.btnManageMatches.Location = new System.Drawing.Point(535, 14);
+            this.btnManageMatches.Location = new System.Drawing.Point(703, 14);
             this.btnManageMatches.Name = "btnManageMatches";
             this.btnManageMatches.Size = new System.Drawing.Size(114, 51);
             this.btnManageMatches.TabIndex = 13;
@@ -53,7 +53,7 @@
             // lblMatchesPlayed
             // 
             this.lblMatchesPlayed.AutoSize = true;
-            this.lblMatchesPlayed.Location = new System.Drawing.Point(499, 33);
+            this.lblMatchesPlayed.Location = new System.Drawing.Point(530, 33);
             this.lblMatchesPlayed.Name = "lblMatchesPlayed";
             this.lblMatchesPlayed.Size = new System.Drawing.Size(30, 13);
             this.lblMatchesPlayed.TabIndex = 12;
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(386, 33);
+            this.label2.Location = new System.Drawing.Point(417, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 11;
@@ -71,7 +71,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(218, 33);
+            this.lblStatus.Location = new System.Drawing.Point(111, 43);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(49, 13);
             this.lblStatus.TabIndex = 10;
@@ -80,7 +80,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(180, 33);
+            this.label1.Location = new System.Drawing.Point(73, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 9;
@@ -98,7 +98,7 @@
             // lblTourneyName
             // 
             this.lblTourneyName.AutoSize = true;
-            this.lblTourneyName.Location = new System.Drawing.Point(64, 33);
+            this.lblTourneyName.Location = new System.Drawing.Point(73, 27);
             this.lblTourneyName.Name = "lblTourneyName";
             this.lblTourneyName.Size = new System.Drawing.Size(89, 13);
             this.lblTourneyName.TabIndex = 7;
@@ -107,7 +107,7 @@
             // lblParticipants
             // 
             this.lblParticipants.AutoSize = true;
-            this.lblParticipants.Location = new System.Drawing.Point(354, 33);
+            this.lblParticipants.Location = new System.Drawing.Point(348, 33);
             this.lblParticipants.Name = "lblParticipants";
             this.lblParticipants.Size = new System.Drawing.Size(25, 13);
             this.lblParticipants.TabIndex = 15;
@@ -116,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(282, 33);
+            this.label4.Location = new System.Drawing.Point(276, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 13);
             this.label4.TabIndex = 14;
@@ -124,7 +124,7 @@
             // 
             // btnRemoveTourney
             // 
-            this.btnRemoveTourney.Location = new System.Drawing.Point(649, 14);
+            this.btnRemoveTourney.Location = new System.Drawing.Point(817, 14);
             this.btnRemoveTourney.Name = "btnRemoveTourney";
             this.btnRemoveTourney.Size = new System.Drawing.Size(114, 51);
             this.btnRemoveTourney.TabIndex = 16;
@@ -147,7 +147,7 @@
             this.Controls.Add(this.lblIndex);
             this.Controls.Add(this.lblTourneyName);
             this.Name = "ManageTourneyListing";
-            this.Size = new System.Drawing.Size(766, 80);
+            this.Size = new System.Drawing.Size(944, 80);
             this.ResumeLayout(false);
             this.PerformLayout();
 
