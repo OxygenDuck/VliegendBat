@@ -22,11 +22,14 @@ namespace VliegendBat
         public ManageMatchPage(Tourney tourney)
         {
             InitializeComponent();
+
+            //Reference the tourney and update the page elements
             this.tourney = tourney;
-            pageFunctionPointer += new UpdateList(ResizeList);
+            pageFunctionPointer += new UpdateList(ResizeList); //Link a delegate in list items
             UpdateListing();
         }
 
+        //Delegate to call a function from list items
         public delegate void UpdateList();
         private event UpdateList pageFunctionPointer;
 
@@ -47,6 +50,8 @@ namespace VliegendBat
                 
                 listing.lblIndex.Text = i.ToString();
                 listing.lblTourneyName.Text = tourney.name;
+
+                //Apply banded rows
                 if (i % 2 == 0)
                 {
                     listing.BackColor = Color.FromArgb(255, 255, 255);

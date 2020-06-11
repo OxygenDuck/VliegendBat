@@ -8,6 +8,7 @@ namespace VliegendBat
 {
     public class Player
     {
+        //Player variables
         public string name = null;
         public string password = null;
         public bool isAdmin = false;

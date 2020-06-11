@@ -13,11 +13,13 @@ namespace VliegendBat
     public partial class EnterTourneyPage : UserControl
     {
         /// <summary>
-        /// Creates a new listing of the enter tourney page
+        /// Creates a new Enter Tourney page
         /// </summary>
         public EnterTourneyPage()
         {
             InitializeComponent();
+
+            //Update page elements
             UpdateListing();
         }
 
@@ -26,17 +28,19 @@ namespace VliegendBat
         /// </summary>
         public void UpdateListing()
         {
+            //Clear all controls
             pnlTourneyList.Controls.Clear();
 
             for (int i = 0; i < Program.Tourneys.Count; i++)
             {
                 if (Program.Tourneys[i].state == TourneyState.NotStarted)
                 {
+                    //Create a new list item
                     SignupTourneyListing listing = new SignupTourneyListing(Program.Tourneys[i]);
                     pnlTourneyList.Controls.Add(listing);
                     listing.Location = new Point(0, 0 + (listing.Height * i));
-                    listing.UpdateListing();
 
+                    //Apply banded rows
                     listing.lblIndex.Text = i.ToString();
                     if (i % 2 == 0)
                     {

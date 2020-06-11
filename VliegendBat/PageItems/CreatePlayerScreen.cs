@@ -39,7 +39,6 @@ namespace VliegendBat
                 MessageBox.Show("De gebruikersnaam is niet ingevuld", "Waarschuwing");
                 return;
             }
-
             if (tbxPassword.Text == "")
             {
                 MessageBox.Show("Het wachtwoord is nog niet ingevuld", "Waarschuwing");

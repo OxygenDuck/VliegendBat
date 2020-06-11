@@ -24,6 +24,7 @@ namespace VliegendBat
         {
             InitializeComponent();
 
+            //Reference the given player and update the page
             this.player = player;
             UpdateStatistics();
             UpdateListing();
@@ -103,17 +104,21 @@ namespace VliegendBat
         /// </summary>
         private void UpdateListing()
         {
+            //Clear all controls
             pnlTourneyListing.Controls.Clear();
             int tourneysFound = 0;
             foreach (Tourney tourney in Program.Tourneys)
             {
                 if (tourney.players.Contains(player))
                 {
+                    //Create a new list item
                     StatisticsTourneyListing newListing = new StatisticsTourneyListing(tourney, player);
                     pnlTourneyListing.Controls.Add(newListing);
 
+                    //Set the correct position
                     newListing.Location = new Point(0, newListing.Height * tourneysFound);
 
+                    //Apply banded rows
                     if (tourneysFound % 2 == 0)
                     {
                         newListing.BackColor = Color.FromArgb(255, 255, 255);

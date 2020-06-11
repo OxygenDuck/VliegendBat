@@ -10,8 +10,8 @@ namespace VliegendBat
 {
     /// <summary>
     /// Program created by Peter Janssen, IC17ao.e
-    /// Last update 10th of June 2020
-    /// Version 0.2.0
+    /// Last update 11th of June 2020
+    /// Version 0.2.1
     /// </summary>
     static class Program
     {
@@ -97,14 +97,17 @@ namespace VliegendBat
         /// </summary>
         public static void LoadPlayers()
         {
+            //Load all the players
             using (StreamReader streamReader = new StreamReader("Storage/Players.json"))
             {
                 Players = JsonConvert.DeserializeObject<List<Player>>(streamReader.ReadToEnd());
             }
 
+            //If there are no players, make a new list and save
             if (Players == null)
             {
                 Players = new List<Player>();
+                SavePlayers(); //Saving creates a new admin account
             }
         }
 
@@ -125,6 +128,7 @@ namespace VliegendBat
         /// </summary>
         public static void LoadTourneys()
         {
+            //Load all tourneys
             List<Tourney> loadedTourneys = null;
             using (StreamReader streamReader = new StreamReader("Storage/Tourneys.json"))
             {

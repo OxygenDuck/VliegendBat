@@ -25,6 +25,8 @@ namespace VliegendBat
         public StatisticsTourneyListing(Tourney tourney, Player player)
         {
             InitializeComponent();
+
+            //Link the player and tourney to this item and update item elements
             this.player = player;
             this.tourney = tourney;
 
@@ -36,6 +38,7 @@ namespace VliegendBat
         /// </summary>
         private void UpdateListing()
         {
+            //Set tourney name label
             lblTourneyName.Text = tourney.name;
 
             //Look how much games have been played already
@@ -47,6 +50,7 @@ namespace VliegendBat
                     matchesPlayed++;
                 }
             }
+            //Show how much matches have been played in the tourney
             lblGamesPlayed.Text = matchesPlayed.ToString() + "/" + tourney.matches.Count.ToString();
 
             //Check what the player's state is the player 

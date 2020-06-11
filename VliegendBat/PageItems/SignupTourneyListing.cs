@@ -22,7 +22,7 @@ namespace VliegendBat
         {
             InitializeComponent();
 
-            //associate this listing with the given Tourney
+            //Link the tourney given and update the elements
             this.tourney = tourney;
             UpdateListing();
         }
@@ -32,24 +32,24 @@ namespace VliegendBat
         /// </summary>
         public void UpdateListing()
         {
+            //Set labels with current information
             lblTourneyName.Text = tourney.name;
             lblStatus.Text = tourney.state.ToString();
             lblMatchesPlayed.Text = "0/" + tourney.matches.Count.ToString();
-            if (tourney.players.Contains(Program.CurrentPlayer))
-            {
-                btnSignUp.Enabled = false;
-            }
-            else
-            {
-                btnSignUp.Enabled = true;
-            }
+
+            //Disable the button if the player is already signed up
+            btnSignUp.Enabled = !tourney.players.Contains(Program.CurrentPlayer);
+            
         }
 
         //Button Click to sign up for tourney
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            //Enter the player into the tourney
             tourney.EnterPlayer(Program.CurrentPlayer);
+            //Update the page items
             UpdateListing();
+            //Save all tourneys
             Program.SaveTourneys();
         }
     }

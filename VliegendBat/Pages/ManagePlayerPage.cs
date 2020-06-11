@@ -19,8 +19,9 @@ namespace VliegendBat
         {
             InitializeComponent();
 
+            //Update the page elements
             UpdateListing();
-            Program.fromPlayerManager = true;
+            Program.fromPlayerManager = true; //Let the program detect from a Player Statistics page that it came from a Manage Player page
         }
 
         /// <summary>
@@ -28,15 +29,19 @@ namespace VliegendBat
         /// </summary>
         public void UpdateListing()
         {
+            //Clear all controls
             pnlPlayerList.Controls.Clear();
 
             for (int i = 0; i < Program.Players.Count; i++)
             {
+                //Add a new list item
                 ManagePlayerListing newListing = new ManagePlayerListing(Program.Players[i]);
                 pnlPlayerList.Controls.Add(newListing);
                 newListing.Location = new Point(0, (newListing.Height * i));
 
                 newListing.lblIndex.Text = i.ToString();
+
+                //Apply banded rows
                 if (i % 2 == 0)
                 {
                     newListing.BackColor = Color.FromArgb(255, 255, 255);

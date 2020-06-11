@@ -32,6 +32,7 @@ namespace VliegendBat
         /// <param name="State">The state of the tourney (mostly needed for loading from storage)</param>
         public Tourney(string Name, TourneyState State = TourneyState.NotStarted)
         {
+            //Link the name and state of the tourney
             name = Name;
             state = State;
         }
@@ -39,17 +40,15 @@ namespace VliegendBat
         //Enter a player into the tourney
         public void EnterPlayer(Player player)
         {
+            //Check if the player has already entered this tourney
             if (players.Contains(player))
             {
                 System.Windows.Forms.MessageBox.Show("Deze speler heeft zich al aangemeld", "Waarschuwing");
                 return;
             }
 
+            //Add the player
             players.Add(player);
-
-            //randomise player order
-            Random rng = new Random();
-            Player[] randomOrder = players.OrderBy(x => rng.Next()).ToArray();
 
             //Determine amount of matches
             matches.Clear();
@@ -62,10 +61,13 @@ namespace VliegendBat
         //Calculate the amount of matches
         private void CalculateMatches()
         {
-            List<Match> matchList = new List<Match>();
-            int playersLeft = players.Count;
-            double matchesInRound = playersLeft / 2;
-            matchesInRound = Math.Floor(matchesInRound);
+            //Some variables to track things
+            List<Match> matchList = new List<Match>(); //The new list of matches for the tourney
+            int playersLeft = players.Count; //The amount of players that will be left in a round
+            double matchesInRound = playersLeft / 2; //The amount of matches in the round
+            matchesInRound = Math.Floor(matchesInRound); //Round the matches down
+
+            //Determine a random order of players
             Random rng = new Random();
             Player[] playersInTourney = players.OrderBy(x => rng.Next()).ToArray();
 
@@ -205,7 +207,7 @@ namespace VliegendBat
                     matchesUnplayed[i].players[0] = nextRoundPlayers[j];
                     j--; //revert j one back because only one winner is used
                 }
-                else
+                else //Else add a normal match
                 {
                     matchesUnplayed[i].players[0] = nextRoundPlayers[j];
                     matchesUnplayed[i].players[1] = nextRoundPlayers[j + 1];

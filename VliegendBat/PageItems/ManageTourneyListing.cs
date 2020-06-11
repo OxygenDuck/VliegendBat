@@ -12,6 +12,7 @@ namespace VliegendBat
 {
     public partial class ManageTourneyListing : UserControl
     {
+        //The tourney pointer
         Tourney tourney = null;
 
         /// <summary>
@@ -21,6 +22,8 @@ namespace VliegendBat
         public ManageTourneyListing(Tourney tourney)
         {
             InitializeComponent();
+
+            //Link the tourney to this item and update the elements
             this.tourney = tourney;
             UpdateListing();
         }
@@ -30,6 +33,7 @@ namespace VliegendBat
         /// </summary>
         public void UpdateListing()
         {
+            //Set labels
             lblStatus.Text = tourney.state.ToString();
             lblTourneyName.Text = tourney.name;
             lblParticipants.Text = tourney.players.Count.ToString();
@@ -43,6 +47,8 @@ namespace VliegendBat
                     matchesPlayed++;
                 }
             }
+
+            //Display the amount of matches played
             lblMatchesPlayed.Text = matchesPlayed.ToString() + "/" + tourney.matches.Count.ToString();        }
 
         //Button click to manage the matches for this tourney
@@ -54,8 +60,9 @@ namespace VliegendBat
         //Button click to remove tourney
         private void btnRemoveTourney_Click(object sender, EventArgs e)
         {
+            //Remove a tourney from the list and update the item
             Program.Tourneys.Remove(tourney);
-            UpdateListing();
+            UpdateListing(); //TODO: update the Manage Tourney page instead
 
             //Save changes to storage
             Program.SaveTourneys();

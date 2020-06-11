@@ -28,10 +28,7 @@ namespace VliegendBat
             {
                 if (player.name == tbxUsername.Text)
                 {
-                    if (Login(player))
-                    {
-                        MainWindow.SetPage(Pages.Dashboard);
-                    }
+                    if (Login(player)) MainWindow.SetPage(Pages.Dashboard);
                     return;
                 }
             }
@@ -46,6 +43,7 @@ namespace VliegendBat
         /// <returns>true if the player has been logged in</returns>
         private bool Login(Player player)
         {
+            //Check if the password is incorrect
             if (tbxPassword.Text != StringCipher.Decrypt(player.password, player.name))
             {
                 MessageBox.Show("De gebruikersnaam en wachtwoord komen niet overeen", "Waarschuwing");

@@ -23,6 +23,7 @@ namespace VliegendBat
         {
             InitializeComponent();
 
+            //Link the player and update item elements
             this.player = player;
             UpdateListing();
         }
@@ -32,7 +33,10 @@ namespace VliegendBat
         /// </summary>
         public void UpdateListing()
         {
+            //Set name label
             lblPlayerName.Text = player.name;
+
+            //Display the correct rights
             if (player.isAdmin)
             {
                 cbxRights.SelectedIndex = 1;

@@ -28,9 +28,10 @@ namespace VliegendBat
         public ManageMatchListing(Match match)
         {
             InitializeComponent();
+            
+            //Link the match and update the list item
             this.match = match;
             Height = 75;
-
             UpdateListing();
         }
 
@@ -38,36 +39,18 @@ namespace VliegendBat
         public void UpdateListing()
         {
             //Set the player names
-            if (match.players[0] != null)
-            {
-                lblPlayerName1.Text = match.players[0].name;
-            }
-            else
-            {
-                lblPlayerName1.Text = "-";
-            }
+            if (match.players[0] != null) lblPlayerName1.Text = match.players[0].name;
+            else lblPlayerName1.Text = "-";
 
-            if (match.players[1] != null)
-            {
-                lblPlayerName2.Text = match.players[1].name;
-            }
-            else
-            {
-                lblPlayerName2.Text = "-";
-            }
+            if (match.players[1] != null) lblPlayerName2.Text = match.players[1].name;
+            else lblPlayerName2.Text = "-";
 
             lblPlayers.Text = lblPlayerName1.Text + ", " + lblPlayerName2.Text;
 
             //Set the match state, and show the winner if there is one
             lblStatus.Text = match.matchState.ToString();
-            if (match.winner != null)
-            {
-                lblWinner.Text = match.winner.name;
-            }
-            else
-            {
-                lblWinner.Text = "-";
-            }
+            if (match.winner != null)  lblWinner.Text = match.winner.name;
+            else lblWinner.Text = "-";
 
             //Disable elements if match has been played already
             if (match.matchState != MatchState.NotStarted)
@@ -105,12 +88,14 @@ namespace VliegendBat
         //Button click to determine the winner and save the result
         private void btnFinish_Click(object sender, EventArgs e)
         {
+            //Check if there is no winner
             if (CheckMatchWinner() == null)
             {
                 MessageBox.Show("Er is geen winnaar gevonden, weet zeker dat één speler beste 3 uit 5 gewonnen heeft", "Waarschuwing");
                 return;
             }
 
+            //Show who has won the match and update the match state
             MessageBox.Show(match.winner.name + " heeft de wedstrijd gewonnen!", "Informatie");
             match.matchState = MatchState.Finished;
 
@@ -138,6 +123,7 @@ namespace VliegendBat
         /// <returns>The player who won the game, returns null if no winner is found</returns>
         private Player CheckMatchWinner()
         {
+            //Counter for the game points for both players
             short scorePlayer1 = 0;
             short scorePlayer2 = 0;
 
@@ -244,11 +230,11 @@ namespace VliegendBat
                     rbtGame5P2.Checked = false;
 
                     //Set the disqualified player's score to 0
-                    //rbtGame1P1.Checked = false;
-                    //rbtGame2P1.Checked = false;
-                    //rbtGame3P1.Checked = false;
-                    //rbtGame4P1.Checked = false;
-                    //rbtGame5P1.Checked = false;
+                    rbtGame1P1.Checked = false;
+                    rbtGame2P1.Checked = false;
+                    rbtGame3P1.Checked = false;
+                    rbtGame4P1.Checked = false;
+                    rbtGame5P1.Checked = false;
                 }
                 else
                 {
@@ -260,11 +246,11 @@ namespace VliegendBat
                     rbtGame5P1.Checked = false;
 
                     //Set the disqualified player's score to 0
-                    //rbtGame1P2.Checked = false;
-                    //rbtGame2P2.Checked = false;
-                    //rbtGame3P2.Checked = false;
-                    //rbtGame4P2.Checked = false;
-                    //rbtGame5P2.Checked = false;
+                    rbtGame1P2.Checked = false;
+                    rbtGame2P2.Checked = false;
+                    rbtGame3P2.Checked = false;
+                    rbtGame4P2.Checked = false;
+                    rbtGame5P2.Checked = false;
                 }
 
                 //Have the match be decided and saved
