@@ -183,7 +183,7 @@ namespace VliegendBat
             }
 
             //Mark finished or skipped round as completed
-            foreach (Match match in matches) match.matchState = MatchState.RoundFinished;
+            foreach (Match match in markAsComplete) match.matchState = MatchState.RoundFinished;
 
             //Check if the final match is played
             if (matchWinners.Count == 1)

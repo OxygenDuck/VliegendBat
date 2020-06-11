@@ -25,7 +25,7 @@ namespace VliegendBat
 
             //Reference the tourney and update the page elements
             this.tourney = tourney;
-            pageFunctionPointer += new UpdateList(ResizeList); //Link a delegate in list items
+            pageFunctionPointer += new UpdateList(ResizeAndUpdateList); //Link a delegate in list items
             UpdateListing();
         }
 
@@ -66,14 +66,15 @@ namespace VliegendBat
             }
 
             //Resize list
-            ResizeList();
+            ResizeAndUpdateList();
         }
 
         /// <summary>
         /// Resizes the match list
         /// </summary>
-        public void ResizeList()
+        public void ResizeAndUpdateList()
         {
+            //Reset the height for the list items, make them position correctly
             int height = 0;
             for (int i = 0; i < tourney.matches.Count; i++)
             {
@@ -81,6 +82,9 @@ namespace VliegendBat
                 listing.Location = new Point(0, height);
                 height += listing.Height;
             }
+
+            //Update the list items
+            foreach (ManageMatchListing listItem in pnlMatchList.Controls) listItem.UpdateListing();
         }
 
         //Button Click to return to Tourney List
