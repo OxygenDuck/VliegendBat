@@ -28,28 +28,32 @@ namespace VliegendBat
         /// </summary>
         public void UpdateListing()
         {
+            //Get all unstarted tourneys
+            List<Tourney> unstartedTourneys = new List<Tourney>();
+            foreach (Tourney tourney in Program.Tourneys)
+            {
+                if (tourney.state == TourneyState.NotStarted) unstartedTourneys.Add(tourney);
+            }
+
             //Clear all controls
             pnlTourneyList.Controls.Clear();
 
-            for (int i = 0; i < Program.Tourneys.Count; i++)
+            for (int i = 0; i < unstartedTourneys.Count; i++)
             {
-                if (Program.Tourneys[i].state == TourneyState.NotStarted)
-                {
-                    //Create a new list item
-                    SignupTourneyListing listing = new SignupTourneyListing(Program.Tourneys[i]);
-                    pnlTourneyList.Controls.Add(listing);
-                    listing.Location = new Point(0, 0 + (listing.Height * i));
+                //Create a new list item
+                SignupTourneyListing listing = new SignupTourneyListing(unstartedTourneys[i]);
+                pnlTourneyList.Controls.Add(listing);
+                listing.Location = new Point(0, 0 + (listing.Height * i));
 
-                    //Apply banded rows
-                    listing.lblIndex.Text = i.ToString();
-                    if (i % 2 == 0)
-                    {
-                        listing.BackColor = Color.FromArgb(255, 255, 255);
-                    }
-                    else
-                    {
-                        listing.BackColor = Color.FromArgb(200, 200, 200);
-                    }
+                //Apply banded rows
+                listing.lblIndex.Text = i.ToString();
+                if (i % 2 == 0)
+                {
+                    listing.BackColor = Color.FromArgb(255, 255, 255);
+                }
+                else
+                {
+                    listing.BackColor = Color.FromArgb(200, 200, 200);
                 }
             }
         }

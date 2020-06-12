@@ -10,8 +10,8 @@ namespace VliegendBat
 {
     /// <summary>
     /// Program created by Peter Janssen, IC17ao.e
-    /// Last update 11th of June 2020
-    /// Version 0.2.1
+    /// Last update 12th of June 2020
+    /// Version 0.2.2
     /// </summary>
     static class Program
     {
